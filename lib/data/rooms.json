@@ -1,0 +1,940 @@
+{
+  "rooms": [
+    {
+      "id": "gf_foundation_office_1",
+      "name": "Foundation Office",
+      "roomNumber": "1",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Bhandary Foundation management and executive administration office.",
+      "coordinates": {
+        "x": 819,
+        "y": 60
+      }
+    },
+    {
+      "id": "gf_principal_chamber_2",
+      "name": "Principal's Chamber",
+      "roomNumber": "2",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Chamber of the Principal, Sahyadri College of Engineering & Management.",
+      "coordinates": {
+        "x": 818,
+        "y": 208
+      }
+    },
+    {
+      "id": "gf_academic_section_3",
+      "name": "Academic Section",
+      "roomNumber": "3",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Student academic records, course coordinators, and academic administration.",
+      "coordinates": {
+        "x": 823,
+        "y": 292
+      }
+    },
+    {
+      "id": "gf_washroom_4",
+      "name": "Washroom / Toilet",
+      "roomNumber": "4",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "East Wing restroom facilities.",
+      "coordinates": {
+        "x": 845,
+        "y": 411
+      }
+    },
+    {
+      "id": "gf_washroom_5",
+      "name": "Washroom / Toilet",
+      "roomNumber": "5",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "East Wing restroom facilities.",
+      "coordinates": {
+        "x": 797,
+        "y": 403
+      }
+    },
+    {
+      "id": "gf_cr_6",
+      "name": "CR (Classroom)",
+      "roomNumber": "6",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "classroom",
+      "description": "Ground floor lecture hall with audio-visual equipment.",
+      "coordinates": {
+        "x": 706,
+        "y": 410
+      }
+    },
+    {
+      "id": "gf_establishment_7",
+      "name": "Establishment Section",
+      "roomNumber": "7",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Staff administration, personnel records, and HR coordination.",
+      "coordinates": {
+        "x": 449,
+        "y": 270
+      }
+    },
+    {
+      "id": "gf_examination_8",
+      "name": "Examination Section",
+      "roomNumber": "8",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "University exam controller, result transcripts, and examination archives.",
+      "coordinates": {
+        "x": 441,
+        "y": 189
+      }
+    },
+    {
+      "id": "gf_director_chamber_10",
+      "name": "Director's Chamber",
+      "roomNumber": "10",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Executive Director chamber.",
+      "coordinates": {
+        "x": 671,
+        "y": 62
+      }
+    },
+    {
+      "id": "gf_store_room_11",
+      "name": "Store Room",
+      "roomNumber": "11",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Administrative materials and equipment storage.",
+      "coordinates": {
+        "x": 551,
+        "y": 62
+      }
+    },
+    {
+      "id": "gf_health_centre_12",
+      "name": "Health Centre",
+      "roomNumber": "12",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Campus wellness clinic, emergency first-aid, and nursing support.",
+      "coordinates": {
+        "x": 485,
+        "y": 65
+      }
+    },
+    {
+      "id": "gf_group_discussion_13",
+      "name": "Group Discussion",
+      "roomNumber": "13",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "hall",
+      "description": "Placement preparation, mock interview, and group discussion chamber.",
+      "coordinates": {
+        "x": 408,
+        "y": 62
+      }
+    },
+    {
+      "id": "gf_department_of_placement_14",
+      "name": "Department of Placement",
+      "roomNumber": "14",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Career counseling, recruitment drives, and corporate relations cell.",
+      "coordinates": {
+        "x": 230,
+        "y": 64
+      }
+    },
+    {
+      "id": "gf_placement_office_18",
+      "name": "Department Wise Placement Office",
+      "roomNumber": "18",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Department-specific placement coordinators and training support.",
+      "coordinates": {
+        "x": 118,
+        "y": 221
+      }
+    },
+    {
+      "id": "gf_seminar_hall_19",
+      "name": "Seminar Hall (Ground Floor)",
+      "roomNumber": "19",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "hall",
+      "description": "Main ground floor auditorium for keynotes, workshops, and guest lectures.",
+      "coordinates": {
+        "x": 302,
+        "y": 405
+      }
+    },
+    {
+      "id": "gf_maintenance_office_20",
+      "name": "Maintenance Office",
+      "roomNumber": "20",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Campus facility management, electrical, and plumbing supervisor.",
+      "coordinates": {
+        "x": 481,
+        "y": 440
+      }
+    },
+    {
+      "id": "gf_study_space_21",
+      "name": "Study Space",
+      "roomNumber": "21",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Quiet independent study and student reading zone.",
+      "coordinates": {
+        "x": 479,
+        "y": 574
+      }
+    },
+    {
+      "id": "gf_computer_maintenance_22",
+      "name": "Computer Maintenance Room",
+      "roomNumber": "22",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "IT systems engineering, campus server maintenance, and PC diagnostics.",
+      "coordinates": {
+        "x": 554,
+        "y": 576
+      }
+    },
+    {
+      "id": "gf_cs_staff_room_23",
+      "name": "Department of Computer Science Staff Room",
+      "roomNumber": "23",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Faculty cabins for the Department of Computer Science & Engineering.",
+      "coordinates": {
+        "x": 663,
+        "y": 575
+      }
+    },
+    {
+      "id": "gf_hod_cs",
+      "name": "HOD Room",
+      "roomNumber": "HOD",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Head of Department office.",
+      "coordinates": {
+        "x": 753,
+        "y": 570
+      }
+    },
+    {
+      "id": "gf_department_library",
+      "name": "Department Library",
+      "roomNumber": "LIB",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Specialized departmental textbook reference and thesis library.",
+      "coordinates": {
+        "x": 827,
+        "y": 576
+      }
+    },
+    {
+      "id": "gf_computer_lab_24",
+      "name": "Computer Lab 24",
+      "roomNumber": "24",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "High-performance computing laboratory and software development lab.",
+      "coordinates": {
+        "x": 821,
+        "y": 674
+      }
+    },
+    {
+      "id": "gf_computer_lab_25",
+      "name": "Computer Lab 25",
+      "roomNumber": "25",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Algorithms, computer networks, and cloud computing laboratory.",
+      "coordinates": {
+        "x": 816,
+        "y": 758
+      }
+    },
+    {
+      "id": "gf_computer_lab_27",
+      "name": "Computer Lab 27",
+      "roomNumber": "27",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Student programming laboratory and general purpose computer lab.",
+      "coordinates": {
+        "x": 800,
+        "y": 878
+      }
+    },
+    {
+      "id": "gf_server_room",
+      "name": "Server Room",
+      "roomNumber": "SRV",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Central network datacenter and campus server rack.",
+      "coordinates": {
+        "x": 695,
+        "y": 878
+      }
+    },
+    {
+      "id": "gf_computer_lab_28",
+      "name": "Computer Lab 28",
+      "roomNumber": "28",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Database systems and software verification computer lab.",
+      "coordinates": {
+        "x": 617,
+        "y": 881
+      }
+    },
+    {
+      "id": "gf_computer_lab_29",
+      "name": "Computer Lab 29",
+      "roomNumber": "29",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Web technologies, UI design, and full-stack development laboratory.",
+      "coordinates": {
+        "x": 512,
+        "y": 881
+      }
+    },
+    {
+      "id": "gf_computer_lab_30",
+      "name": "Computer Lab 30",
+      "roomNumber": "30",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Artificial Intelligence, machine learning, and data science lab.",
+      "coordinates": {
+        "x": 404,
+        "y": 881
+      }
+    },
+    {
+      "id": "gf_center_for_excellence_31",
+      "name": "Center for Excellence",
+      "roomNumber": "31",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Industry collaboration incubator, research cell, and IoT innovation lab.",
+      "coordinates": {
+        "x": 459,
+        "y": 784
+      }
+    },
+    {
+      "id": "gf_innovation_lab_32",
+      "name": "Innovation Lab",
+      "roomNumber": "32",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "lab",
+      "description": "Hardware prototyping, embedded robotics, and 3D design center.",
+      "coordinates": {
+        "x": 454,
+        "y": 670
+      }
+    },
+    {
+      "id": "gf_study_space_33",
+      "name": "Study Space",
+      "roomNumber": "33",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Collaborative group study and discussion area.",
+      "coordinates": {
+        "x": 550,
+        "y": 674
+      }
+    },
+    {
+      "id": "gf_record_room_34",
+      "name": "Record Room",
+      "roomNumber": "34",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Institutional archives and administrative records.",
+      "coordinates": {
+        "x": 392,
+        "y": 669
+      }
+    },
+    {
+      "id": "gf_store_room_35",
+      "name": "Store Room",
+      "roomNumber": "35",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Administrative hardware and event material storage.",
+      "coordinates": {
+        "x": 328,
+        "y": 670
+      }
+    },
+    {
+      "id": "gf_guest_lounge_36",
+      "name": "Guest's Lounge",
+      "roomNumber": "36",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Welcoming lounge with restroom and rest area for campus guests.",
+      "coordinates": {
+        "x": 291,
+        "y": 734
+      }
+    },
+    {
+      "id": "gf_admission_section_37",
+      "name": "Admission Section",
+      "roomNumber": "37",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Prospective student admissions, document verification, and counseling.",
+      "coordinates": {
+        "x": 262,
+        "y": 879
+      }
+    },
+    {
+      "id": "gf_visitors_lounge_38",
+      "name": "Visitor's Lounge",
+      "roomNumber": "38",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Reception and waiting lounge for campus visitors, parents, and delegates.",
+      "coordinates": {
+        "x": 122,
+        "y": 873
+      }
+    },
+    {
+      "id": "gf_fee_counter_39",
+      "name": "Fee Counter",
+      "roomNumber": "39",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Student accounts, fee collections, and receipts desk.",
+      "coordinates": {
+        "x": 127,
+        "y": 788
+      }
+    },
+    {
+      "id": "gf_discussion_room_40",
+      "name": "Discussion Room",
+      "roomNumber": "40",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "hall",
+      "description": "Faculty-student interaction and academic consultation cabin.",
+      "coordinates": {
+        "x": 122,
+        "y": 730
+      }
+    },
+    {
+      "id": "gf_student_room_41",
+      "name": "Student Room 41",
+      "roomNumber": "41",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Student activity and project coordination room.",
+      "coordinates": {
+        "x": 137,
+        "y": 591
+      }
+    },
+    {
+      "id": "gf_student_room_42",
+      "name": "Student Room 42",
+      "roomNumber": "42",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Technical societies and club meeting room.",
+      "coordinates": {
+        "x": 96,
+        "y": 591
+      }
+    },
+    {
+      "id": "gf_study_space_43",
+      "name": "Study Space",
+      "roomNumber": "43",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "Quiet personal reading and study space.",
+      "coordinates": {
+        "x": 121,
+        "y": 505
+      }
+    },
+    {
+      "id": "gf_board_room_44",
+      "name": "Board Room",
+      "roomNumber": "44",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "office",
+      "description": "Executive conference room for Board of Trustees and academic council.",
+      "coordinates": {
+        "x": 123,
+        "y": 363
+      }
+    },
+    {
+      "id": "gf_main_entrance",
+      "name": "Main Entry",
+      "roomNumber": "ENT",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "entrance",
+      "description": "Main ground floor entrance of Sahyadri College.",
+      "coordinates": {
+        "x": 186,
+        "y": 924
+      }
+    },
+    {
+      "id": "gf_west_entrance",
+      "name": "Side Entry",
+      "roomNumber": "ENT-2",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "entrance",
+      "description": "West entrance porch near Discussion Room and Fee Counter.",
+      "coordinates": {
+        "x": 48,
+        "y": 820
+      }
+    },
+    {
+      "id": "gf_courtyard_1",
+      "name": "Courtyard 1",
+      "roomNumber": "C1",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "South-East open garden courtyard with trees and natural light.",
+      "coordinates": {
+        "x": 661,
+        "y": 721
+      }
+    },
+    {
+      "id": "gf_courtyard_2",
+      "name": "Courtyard 2",
+      "roomNumber": "C2",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "South-West open courtyard adjacent to Seminar Hall.",
+      "coordinates": {
+        "x": 302,
+        "y": 540
+      }
+    },
+    {
+      "id": "gf_courtyard_3",
+      "name": "Courtyard 3",
+      "roomNumber": "C3",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "North-West open courtyard.",
+      "coordinates": {
+        "x": 298,
+        "y": 228
+      }
+    },
+    {
+      "id": "gf_courtyard_4",
+      "name": "Courtyard 4",
+      "roomNumber": "C4",
+      "floor": "ground",
+      "floorLevel": 0,
+      "category": "facility",
+      "description": "North-East open courtyard.",
+      "coordinates": {
+        "x": 620,
+        "y": 228
+      }
+    },
+    {
+      "id": "ff_mba_director_101",
+      "name": "MBA Director's Chamber",
+      "roomNumber": "101",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "office",
+      "description": "Department of Business Administration Director's chamber.",
+      "coordinates": {
+        "x": 800,
+        "y": 210
+      }
+    },
+    {
+      "id": "ff_mba_cr_102",
+      "name": "MBA Classroom 102",
+      "roomNumber": "102",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "classroom",
+      "description": "MBA lecture classroom with multimedia podium.",
+      "coordinates": {
+        "x": 770,
+        "y": 310
+      }
+    },
+    {
+      "id": "ff_mba_cr_103",
+      "name": "MBA Classroom 103",
+      "roomNumber": "103",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "classroom",
+      "description": "MBA second year specialization classroom.",
+      "coordinates": {
+        "x": 770,
+        "y": 410
+      }
+    },
+    {
+      "id": "ff_mba_staff_room_106",
+      "name": "MBA Staff Room",
+      "roomNumber": "106",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "office",
+      "description": "MBA Department faculty and staff room.",
+      "coordinates": {
+        "x": 680,
+        "y": 500
+      }
+    },
+    {
+      "id": "ff_mba_library_108",
+      "name": "MBA Department Library",
+      "roomNumber": "108",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "facility",
+      "description": "Specialized MBA research library, journals, and case study collection.",
+      "coordinates": {
+        "x": 430,
+        "y": 350
+      }
+    },
+    {
+      "id": "ff_mba_office_109",
+      "name": "MBA Office",
+      "roomNumber": "109",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "office",
+      "description": "MBA administration and program coordinator office.",
+      "coordinates": {
+        "x": 710,
+        "y": 210
+      }
+    },
+    {
+      "id": "ff_mba_class_110",
+      "name": "MBA Classroom 110",
+      "roomNumber": "110",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "classroom",
+      "description": "Interactive case-study lecture hall.",
+      "coordinates": {
+        "x": 650,
+        "y": 210
+      }
+    },
+    {
+      "id": "ff_guest_faculty_111",
+      "name": "Guest Faculty Room",
+      "roomNumber": "111",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "office",
+      "description": "Visiting professor and guest faculty chamber.",
+      "coordinates": {
+        "x": 530,
+        "y": 210
+      }
+    },
+    {
+      "id": "ff_caed_lab_112",
+      "name": "CAED Lab",
+      "roomNumber": "112",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "lab",
+      "description": "Computer Aided Engineering Drawing laboratory with AutoCAD/SolidWorks.",
+      "coordinates": {
+        "x": 370,
+        "y": 210
+      }
+    },
+    {
+      "id": "ff_ladies_room_113",
+      "name": "Ladies Common Room",
+      "roomNumber": "113",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "facility",
+      "description": "Dedicated resting lounge and common room for female students.",
+      "coordinates": {
+        "x": 180,
+        "y": 210
+      }
+    },
+    {
+      "id": "ff_aptitude_lab_116",
+      "name": "Aptitude Lab",
+      "roomNumber": "116",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "lab",
+      "description": "Placement training and online aptitude test laboratory.",
+      "coordinates": {
+        "x": 80,
+        "y": 420
+      }
+    },
+    {
+      "id": "ff_electrical_panel_118",
+      "name": "Electrical Panel Room",
+      "roomNumber": "118",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "facility",
+      "description": "Main electrical distribution and UPS room for 1st floor.",
+      "coordinates": {
+        "x": 450,
+        "y": 510
+      }
+    },
+    {
+      "id": "ff_ec_office_120a",
+      "name": "E&C Department Office",
+      "roomNumber": "120A",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "office",
+      "description": "Electronics & Communication Engineering department administration.",
+      "coordinates": {
+        "x": 570,
+        "y": 620
+      }
+    },
+    {
+      "id": "ff_ec_staff_room_121",
+      "name": "E&C Staff Room",
+      "roomNumber": "121",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "office",
+      "description": "Electronics & Communication Department faculty room.",
+      "coordinates": {
+        "x": 680,
+        "y": 620
+      }
+    },
+    {
+      "id": "ff_staircase_1",
+      "name": "Staircase 1 (West)",
+      "roomNumber": "ST-1",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "staircase",
+      "description": "West wing staircase.",
+      "coordinates": {
+        "x": 80,
+        "y": 700
+      }
+    },
+    {
+      "id": "ff_staircase_2",
+      "name": "Staircase 2 (East)",
+      "roomNumber": "ST-2",
+      "floor": "first",
+      "floorLevel": 1,
+      "category": "staircase",
+      "description": "East wing staircase.",
+      "coordinates": {
+        "x": 900,
+        "y": 400
+      }
+    },
+    {
+      "id": "sf_mech_lab_201",
+      "name": "Mechanics Lab",
+      "roomNumber": "201",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "lab",
+      "description": "Mechanical engineering workshop and testing laboratory.",
+      "coordinates": {
+        "x": 200,
+        "y": 300
+      }
+    },
+    {
+      "id": "sf_civil_lab_202",
+      "name": "Civil Engineering Lab",
+      "roomNumber": "202",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "lab",
+      "description": "Concrete and structural testing laboratory.",
+      "coordinates": {
+        "x": 350,
+        "y": 300
+      }
+    },
+    {
+      "id": "sf_physics_lab_203",
+      "name": "Physics Lab",
+      "roomNumber": "203",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "lab",
+      "description": "Physics experimental lab for first-year students.",
+      "coordinates": {
+        "x": 500,
+        "y": 300
+      }
+    },
+    {
+      "id": "sf_chemistry_lab_204",
+      "name": "Chemistry Lab",
+      "roomNumber": "204",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "lab",
+      "description": "Chemistry laboratory for first-year engineering students.",
+      "coordinates": {
+        "x": 650,
+        "y": 300
+      }
+    },
+    {
+      "id": "sf_classroom_205",
+      "name": "Classroom 205",
+      "roomNumber": "205",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "classroom",
+      "description": "Standard lecture classroom.",
+      "coordinates": {
+        "x": 200,
+        "y": 500
+      }
+    },
+    {
+      "id": "sf_classroom_206",
+      "name": "Classroom 206",
+      "roomNumber": "206",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "classroom",
+      "description": "Standard lecture classroom.",
+      "coordinates": {
+        "x": 350,
+        "y": 500
+      }
+    },
+    {
+      "id": "sf_faculty_room_207",
+      "name": "Faculty Room",
+      "roomNumber": "207",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "office",
+      "description": "Engineering department faculty room.",
+      "coordinates": {
+        "x": 500,
+        "y": 500
+      }
+    },
+    {
+      "id": "sf_staircase_1",
+      "name": "Staircase 1",
+      "roomNumber": "ST-1",
+      "floor": "second",
+      "floorLevel": 2,
+      "category": "staircase",
+      "description": "West wing staircase — 2nd floor.",
+      "coordinates": {
+        "x": 80,
+        "y": 700
+      }
+    }
+  ]
+}

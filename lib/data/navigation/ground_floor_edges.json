@@ -1,0 +1,1085 @@
+{
+  "floor": "ground",
+  "edges": [
+    {
+      "fromNode": "node_main_entry",
+      "toNode": "node_entry_lobby",
+      "distance": 8.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_entry_lobby",
+      "toNode": "node_main_entry",
+      "distance": 8.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_entry_lobby",
+      "toNode": "node_corr_w_lobby",
+      "distance": 6.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_lobby",
+      "toNode": "node_entry_lobby",
+      "distance": 6.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_entry_lobby",
+      "toNode": "door_admission_37",
+      "distance": 8.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_admission_37",
+      "toNode": "node_entry_lobby",
+      "distance": 8.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_admission_37",
+      "toNode": "node_corr_s_spine",
+      "distance": 9.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_spine",
+      "toNode": "door_admission_37",
+      "distance": 9.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_west_entry",
+      "toNode": "node_corr_w_lobby",
+      "distance": 9.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_lobby",
+      "toNode": "node_west_entry",
+      "distance": 9.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_lobby",
+      "toNode": "door_visitors_38",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_visitors_38",
+      "toNode": "node_corr_w_lobby",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_lobby",
+      "toNode": "door_fee_39",
+      "distance": 5.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_fee_39",
+      "toNode": "node_corr_w_lobby",
+      "distance": 5.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_fee_39",
+      "toNode": "door_discussion_40",
+      "distance": 6.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_discussion_40",
+      "toNode": "door_fee_39",
+      "distance": 6.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_discussion_40",
+      "toNode": "node_corr_w_mid",
+      "distance": 7.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_mid",
+      "toNode": "door_discussion_40",
+      "distance": 7.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_mid",
+      "toNode": "door_student_42",
+      "distance": 5.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_student_42",
+      "toNode": "node_corr_w_mid",
+      "distance": 5.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_student_42",
+      "toNode": "door_student_41",
+      "distance": 2.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_student_41",
+      "toNode": "door_student_42",
+      "distance": 2.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_student_41",
+      "toNode": "door_study_43",
+      "distance": 8.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_study_43",
+      "toNode": "door_student_41",
+      "distance": 8.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_study_43",
+      "toNode": "node_corr_w_c2",
+      "distance": 8.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_c2",
+      "toNode": "door_study_43",
+      "distance": 8.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_c2",
+      "toNode": "door_board_44",
+      "distance": 7.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_board_44",
+      "toNode": "node_corr_w_c2",
+      "distance": 7.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_board_44",
+      "toNode": "node_corr_w_c3",
+      "distance": 8.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_c3",
+      "toNode": "door_board_44",
+      "distance": 8.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_c3",
+      "toNode": "door_placement_18",
+      "distance": 7.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_placement_18",
+      "toNode": "node_corr_w_c3",
+      "distance": 7.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_placement_18",
+      "toNode": "node_corr_nw_corner",
+      "distance": 11.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_nw_corner",
+      "toNode": "door_placement_18",
+      "distance": 11.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_nw_corner",
+      "toNode": "door_stair_3",
+      "distance": 3.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_stair_3",
+      "toNode": "node_corr_nw_corner",
+      "distance": 3.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_nw_corner",
+      "toNode": "door_foundry_46",
+      "distance": 7.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_foundry_46",
+      "toNode": "node_corr_nw_corner",
+      "distance": 7.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_foundry_46",
+      "toNode": "door_construction_45",
+      "distance": 8.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_construction_45",
+      "toNode": "door_foundry_46",
+      "distance": 8.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_construction_45",
+      "toNode": "node_corr_n_mid_w",
+      "distance": 9.9,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_mid_w",
+      "toNode": "door_construction_45",
+      "distance": 9.9,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_mid_w",
+      "toNode": "door_gd_13",
+      "distance": 4.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_gd_13",
+      "toNode": "node_corr_n_mid_w",
+      "distance": 4.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_gd_13",
+      "toNode": "node_corr_n_spine",
+      "distance": 5.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_spine",
+      "toNode": "door_gd_13",
+      "distance": 5.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_spine",
+      "toNode": "door_health_12",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_health_12",
+      "toNode": "node_corr_n_spine",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_health_12",
+      "toNode": "door_store_11",
+      "distance": 4.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_store_11",
+      "toNode": "door_health_12",
+      "distance": 4.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_store_11",
+      "toNode": "node_corr_n_stair2",
+      "distance": 4.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_stair2",
+      "toNode": "door_store_11",
+      "distance": 4.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_stair2",
+      "toNode": "door_stair_2",
+      "distance": 2.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_stair_2",
+      "toNode": "node_corr_n_stair2",
+      "distance": 2.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_stair2",
+      "toNode": "door_director_10",
+      "distance": 11.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_director_10",
+      "toNode": "node_corr_n_stair2",
+      "distance": 11.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_director_10",
+      "toNode": "node_corr_ne_corner",
+      "distance": 5.9,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_ne_corner",
+      "toNode": "door_director_10",
+      "distance": 5.9,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_ne_corner",
+      "toNode": "door_foundation_1",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_foundation_1",
+      "toNode": "node_corr_ne_corner",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_foundation_1",
+      "toNode": "door_stair_1",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_stair_1",
+      "toNode": "door_foundation_1",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_ne_corner",
+      "toNode": "node_corr_e_princ",
+      "distance": 10.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_princ",
+      "toNode": "node_corr_ne_corner",
+      "distance": 10.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_princ",
+      "toNode": "door_principal_2",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_principal_2",
+      "toNode": "node_corr_e_princ",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_princ",
+      "toNode": "node_corr_e_acad",
+      "distance": 9.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_acad",
+      "toNode": "node_corr_e_princ",
+      "distance": 9.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_acad",
+      "toNode": "door_academic_3",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_academic_3",
+      "toNode": "node_corr_e_acad",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_acad",
+      "toNode": "node_corr_e_cr",
+      "distance": 8.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_cr",
+      "toNode": "node_corr_e_acad",
+      "distance": 8.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_cr",
+      "toNode": "door_cr_6",
+      "distance": 7.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_cr_6",
+      "toNode": "node_corr_e_cr",
+      "distance": 7.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_cr",
+      "toNode": "door_toilet_5",
+      "distance": 2.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_toilet_5",
+      "toNode": "node_corr_e_cr",
+      "distance": 2.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_toilet_5",
+      "toNode": "door_toilet_4",
+      "distance": 5.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_toilet_4",
+      "toNode": "door_toilet_5",
+      "distance": 5.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_cr",
+      "toNode": "node_corr_e_mid",
+      "distance": 12.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_mid",
+      "toNode": "node_corr_e_cr",
+      "distance": 12.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_mid",
+      "toNode": "node_corr_e_hod",
+      "distance": 10.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_hod",
+      "toNode": "node_corr_e_mid",
+      "distance": 10.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_hod",
+      "toNode": "door_hod",
+      "distance": 1.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_hod",
+      "toNode": "node_corr_e_hod",
+      "distance": 1.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_hod",
+      "toNode": "door_dept_lib",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_dept_lib",
+      "toNode": "node_corr_e_hod",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_hod",
+      "toNode": "node_corr_e_lab24",
+      "distance": 10.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab24",
+      "toNode": "node_corr_e_hod",
+      "distance": 10.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab24",
+      "toNode": "door_lab_24",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_lab_24",
+      "toNode": "node_corr_e_lab24",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab24",
+      "toNode": "node_corr_e_lab25",
+      "distance": 9.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab25",
+      "toNode": "node_corr_e_lab24",
+      "distance": 9.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab25",
+      "toNode": "door_lab_25",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_lab_25",
+      "toNode": "node_corr_e_lab25",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab25",
+      "toNode": "node_corr_se_corner",
+      "distance": 8.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_se_corner",
+      "toNode": "node_corr_e_lab25",
+      "distance": 8.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_se_corner",
+      "toNode": "door_lab_27",
+      "distance": 8.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_lab_27",
+      "toNode": "node_corr_se_corner",
+      "distance": 8.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_se_corner",
+      "toNode": "door_server_room",
+      "distance": 3.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_server_room",
+      "toNode": "node_corr_se_corner",
+      "distance": 3.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_server_room",
+      "toNode": "node_corr_s_lab28",
+      "distance": 8.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab28",
+      "toNode": "door_server_room",
+      "distance": 8.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab28",
+      "toNode": "door_lab_28",
+      "distance": 1.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_lab_28",
+      "toNode": "node_corr_s_lab28",
+      "distance": 1.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab28",
+      "toNode": "node_corr_s_lab29",
+      "distance": 11.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab29",
+      "toNode": "node_corr_s_lab28",
+      "distance": 11.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab29",
+      "toNode": "door_lab_29",
+      "distance": 1.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_lab_29",
+      "toNode": "node_corr_s_lab29",
+      "distance": 1.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab29",
+      "toNode": "node_corr_s_lab30",
+      "distance": 11.9,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab30",
+      "toNode": "node_corr_s_lab29",
+      "distance": 11.9,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab30",
+      "toNode": "door_lab_30",
+      "distance": 1.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_lab_30",
+      "toNode": "node_corr_s_lab30",
+      "distance": 1.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_lab30",
+      "toNode": "node_corr_s_spine",
+      "distance": 6.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_spine",
+      "toNode": "node_corr_s_lab30",
+      "distance": 6.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_spine",
+      "toNode": "node_entry_lobby",
+      "distance": 17.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_entry_lobby",
+      "toNode": "node_corr_s_spine",
+      "distance": 17.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_n_spine",
+      "toNode": "door_exam_8",
+      "distance": 8.1,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_exam_8",
+      "toNode": "node_corr_n_spine",
+      "distance": 8.1,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_exam_8",
+      "toNode": "door_estab_7",
+      "distance": 6.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_estab_7",
+      "toNode": "door_exam_8",
+      "distance": 6.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_estab_7",
+      "toNode": "node_corr_spine_mid",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_spine_mid",
+      "toNode": "door_estab_7",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_spine_mid",
+      "toNode": "node_corr_stair4",
+      "distance": 12.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair4",
+      "toNode": "node_corr_spine_mid",
+      "distance": 12.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair4",
+      "toNode": "door_stair_4",
+      "distance": 2.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_stair_4",
+      "toNode": "node_corr_stair4",
+      "distance": 2.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair4",
+      "toNode": "door_seminar_19",
+      "distance": 7.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_seminar_19",
+      "toNode": "node_corr_stair4",
+      "distance": 7.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair4",
+      "toNode": "node_corr_maint_20",
+      "distance": 11.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_maint_20",
+      "toNode": "node_corr_stair4",
+      "distance": 11.7,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_maint_20",
+      "toNode": "door_maint_20",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_maint_20",
+      "toNode": "node_corr_maint_20",
+      "distance": 3.3,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_maint_20",
+      "toNode": "node_corr_stair5",
+      "distance": 12.1,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair5",
+      "toNode": "node_corr_maint_20",
+      "distance": 12.1,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair5",
+      "toNode": "door_stair_5",
+      "distance": 4.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_stair_5",
+      "toNode": "node_corr_stair5",
+      "distance": 4.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair5",
+      "toNode": "node_corr_cs_staff",
+      "distance": 11.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_cs_staff",
+      "toNode": "node_corr_stair5",
+      "distance": 11.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_cs_staff",
+      "toNode": "door_comp_maint_22",
+      "distance": 4.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_comp_maint_22",
+      "toNode": "node_corr_cs_staff",
+      "distance": 4.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_cs_staff",
+      "toNode": "door_cs_staff_23",
+      "distance": 6.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_cs_staff_23",
+      "toNode": "node_corr_cs_staff",
+      "distance": 6.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_cs_staff",
+      "toNode": "node_corr_e_mid",
+      "distance": 24.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_mid",
+      "toNode": "node_corr_cs_staff",
+      "distance": 24.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_maint_20",
+      "toNode": "node_corr_study_21",
+      "distance": 11.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_study_21",
+      "toNode": "node_corr_maint_20",
+      "distance": 11.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_study_21",
+      "toNode": "door_study_21",
+      "distance": 5.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_study_21",
+      "toNode": "node_corr_study_21",
+      "distance": 5.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_study_21",
+      "toNode": "node_corr_c1_nw",
+      "distance": 12.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_nw",
+      "toNode": "node_corr_study_21",
+      "distance": 12.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_seminar_19",
+      "toNode": "node_corr_seminar_s",
+      "distance": 11.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_seminar_s",
+      "toNode": "door_seminar_19",
+      "distance": 11.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_seminar_s",
+      "toNode": "node_corr_w_c2",
+      "distance": 19.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_c2",
+      "toNode": "node_corr_seminar_s",
+      "distance": 19.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_stair4",
+      "toNode": "node_corr_w_c3",
+      "distance": 26.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_w_c3",
+      "toNode": "node_corr_stair4",
+      "distance": 26.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_nw",
+      "toNode": "door_innov_32",
+      "distance": 1.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_innov_32",
+      "toNode": "node_corr_c1_nw",
+      "distance": 1.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_nw",
+      "toNode": "door_study_33",
+      "distance": 6.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_study_33",
+      "toNode": "node_corr_c1_nw",
+      "distance": 6.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_nw",
+      "toNode": "node_corr_c1_n",
+      "distance": 14.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_n",
+      "toNode": "node_corr_c1_nw",
+      "distance": 14.5,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_n",
+      "toNode": "node_corr_e_lab24",
+      "distance": 14.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_e_lab24",
+      "toNode": "node_corr_c1_n",
+      "distance": 14.6,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_c1_nw",
+      "toNode": "node_corr_record_34",
+      "distance": 8.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_record_34",
+      "toNode": "node_corr_c1_nw",
+      "distance": 8.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_record_34",
+      "toNode": "door_record_34",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_record_34",
+      "toNode": "node_corr_record_34",
+      "distance": 2.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_record_34",
+      "toNode": "door_store_35",
+      "distance": 5.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_store_35",
+      "toNode": "node_corr_record_34",
+      "distance": 5.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_store_35",
+      "toNode": "door_stair_6",
+      "distance": 8.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_stair_6",
+      "toNode": "door_store_35",
+      "distance": 8.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_record_34",
+      "toNode": "node_corr_guest_36",
+      "distance": 10.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_guest_36",
+      "toNode": "node_corr_record_34",
+      "distance": 10.0,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_guest_36",
+      "toNode": "door_guest_36",
+      "distance": 4.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_guest_36",
+      "toNode": "node_corr_guest_36",
+      "distance": 4.2,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_guest_36",
+      "toNode": "door_coe_31",
+      "distance": 12.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "door_coe_31",
+      "toNode": "node_corr_guest_36",
+      "distance": 12.4,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_guest_36",
+      "toNode": "node_corr_s_spine",
+      "distance": 13.8,
+      "accessible": true
+    },
+    {
+      "fromNode": "node_corr_s_spine",
+      "toNode": "node_corr_guest_36",
+      "distance": 13.8,
+      "accessible": true
+    }
+  ]
+}

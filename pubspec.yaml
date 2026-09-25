@@ -1,0 +1,52 @@
+name: sahyadri_ar
+description: "Sahyadri AR - Indoor Campus Navigation for Sahyadri College of Engineering & Management"
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # UI & Icons
+  cupertino_icons: ^1.0.8
+  google_fonts: ^6.2.1
+
+  # Mapbox Maps SDK for Flutter
+  mapbox_maps_flutter: ^2.4.0
+
+  # Navigation & routing between screens
+  go_router: ^14.6.2
+
+  # State management
+  provider: ^6.1.2
+
+  # Utilities
+  equatable: ^2.0.5
+
+  # Camera (live preview for AR navigation overlay)
+  # 0.10.x uses Camera2 not CameraX — avoids concurrent-futures dependency issue
+  camera: ^0.10.5+9
+  permission_handler: ^11.3.1
+
+  # Firebase
+  firebase_core: ^3.12.0
+  cloud_firestore: ^5.6.5
+  vector_math: ^2.1.4
+  camera_web: ^0.3.5+6
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - lib/data/rooms.json
+    - lib/data/navigation/
+    - assets/images/

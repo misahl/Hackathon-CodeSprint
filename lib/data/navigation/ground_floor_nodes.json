@@ -1,0 +1,688 @@
+{
+  "floor": "ground",
+  "nodes": [
+    {
+      "id": "node_main_entry",
+      "floor": "ground",
+      "x": 186,
+      "y": 915,
+      "type": "entrance",
+      "label": "Main Entry"
+    },
+    {
+      "id": "node_west_entry",
+      "floor": "ground",
+      "x": 48,
+      "y": 820,
+      "type": "entrance",
+      "label": "West Porch Entry"
+    },
+    {
+      "id": "node_entry_lobby",
+      "floor": "ground",
+      "x": 186,
+      "y": 835,
+      "type": "corridor",
+      "label": "Main Entry Foyer"
+    },
+    {
+      "id": "node_corr_w_lobby",
+      "floor": "ground",
+      "x": 128,
+      "y": 835,
+      "type": "corridor"
+    },
+    {
+      "id": "door_visitors_38",
+      "floor": "ground",
+      "x": 128,
+      "y": 865,
+      "type": "room_door",
+      "roomId": "gf_visitors_lounge_38",
+      "label": "Visitor Lounge Door"
+    },
+    {
+      "id": "door_fee_39",
+      "floor": "ground",
+      "x": 128,
+      "y": 788,
+      "type": "room_door",
+      "roomId": "gf_fee_counter_39",
+      "label": "Fee Counter Door"
+    },
+    {
+      "id": "door_discussion_40",
+      "floor": "ground",
+      "x": 128,
+      "y": 730,
+      "type": "room_door",
+      "roomId": "gf_discussion_room_40",
+      "label": "Discussion Room Door"
+    },
+    {
+      "id": "node_corr_w_mid",
+      "floor": "ground",
+      "x": 128,
+      "y": 660,
+      "type": "corridor"
+    },
+    {
+      "id": "door_student_42",
+      "floor": "ground",
+      "x": 128,
+      "y": 610,
+      "type": "room_door",
+      "roomId": "gf_student_room_42",
+      "label": "Student Room 42 Door"
+    },
+    {
+      "id": "door_student_41",
+      "floor": "ground",
+      "x": 128,
+      "y": 585,
+      "type": "room_door",
+      "roomId": "gf_student_room_41",
+      "label": "Student Room 41 Door"
+    },
+    {
+      "id": "door_study_43",
+      "floor": "ground",
+      "x": 128,
+      "y": 505,
+      "type": "room_door",
+      "roomId": "gf_study_space_43",
+      "label": "Study Space 43 Door"
+    },
+    {
+      "id": "node_corr_w_c2",
+      "floor": "ground",
+      "x": 128,
+      "y": 430,
+      "type": "corridor"
+    },
+    {
+      "id": "door_board_44",
+      "floor": "ground",
+      "x": 128,
+      "y": 363,
+      "type": "room_door",
+      "roomId": "gf_board_room_44",
+      "label": "Board Room Door"
+    },
+    {
+      "id": "node_corr_w_c3",
+      "floor": "ground",
+      "x": 128,
+      "y": 285,
+      "type": "corridor"
+    },
+    {
+      "id": "door_placement_18",
+      "floor": "ground",
+      "x": 128,
+      "y": 221,
+      "type": "room_door",
+      "roomId": "gf_placement_office_18",
+      "label": "Placement Office Door"
+    },
+    {
+      "id": "node_corr_nw_corner",
+      "floor": "ground",
+      "x": 128,
+      "y": 115,
+      "type": "corridor"
+    },
+    {
+      "id": "door_stair_3",
+      "floor": "ground",
+      "x": 95,
+      "y": 115,
+      "type": "staircase",
+      "label": "Stair 3 Door"
+    },
+    {
+      "id": "door_foundry_46",
+      "floor": "ground",
+      "x": 195,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_foundry_46",
+      "label": "Foundry & Forging Door"
+    },
+    {
+      "id": "door_construction_45",
+      "floor": "ground",
+      "x": 275,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_construction_45",
+      "label": "Construction Office Door"
+    },
+    {
+      "id": "node_corr_n_mid_w",
+      "floor": "ground",
+      "x": 365,
+      "y": 115,
+      "type": "corridor"
+    },
+    {
+      "id": "door_gd_13",
+      "floor": "ground",
+      "x": 408,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_group_discussion_13",
+      "label": "Group Discussion Door"
+    },
+    {
+      "id": "node_corr_n_spine",
+      "floor": "ground",
+      "x": 455,
+      "y": 115,
+      "type": "corridor"
+    },
+    {
+      "id": "door_health_12",
+      "floor": "ground",
+      "x": 485,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_health_centre_12",
+      "label": "Health Centre Door"
+    },
+    {
+      "id": "door_store_11",
+      "floor": "ground",
+      "x": 525,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_store_room_11",
+      "label": "Store Room 11 Door"
+    },
+    {
+      "id": "node_corr_n_stair2",
+      "floor": "ground",
+      "x": 565,
+      "y": 115,
+      "type": "corridor"
+    },
+    {
+      "id": "door_stair_2",
+      "floor": "ground",
+      "x": 565,
+      "y": 90,
+      "type": "staircase",
+      "label": "Stair 2 Door"
+    },
+    {
+      "id": "door_director_10",
+      "floor": "ground",
+      "x": 671,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_director_chamber_10",
+      "label": "Director Chamber Door"
+    },
+    {
+      "id": "node_corr_ne_corner",
+      "floor": "ground",
+      "x": 725,
+      "y": 115,
+      "type": "corridor"
+    },
+    {
+      "id": "door_foundation_1",
+      "floor": "ground",
+      "x": 755,
+      "y": 115,
+      "type": "room_door",
+      "roomId": "gf_foundation_office_1",
+      "label": "Foundation Office Door"
+    },
+    {
+      "id": "door_stair_1",
+      "floor": "ground",
+      "x": 785,
+      "y": 115,
+      "type": "staircase",
+      "label": "Stair 1 Door"
+    },
+    {
+      "id": "node_corr_e_princ",
+      "floor": "ground",
+      "x": 725,
+      "y": 208,
+      "type": "corridor"
+    },
+    {
+      "id": "door_principal_2",
+      "floor": "ground",
+      "x": 745,
+      "y": 208,
+      "type": "room_door",
+      "roomId": "gf_principal_chamber_2",
+      "label": "Principal Chamber Door"
+    },
+    {
+      "id": "node_corr_e_acad",
+      "floor": "ground",
+      "x": 725,
+      "y": 292,
+      "type": "corridor"
+    },
+    {
+      "id": "door_academic_3",
+      "floor": "ground",
+      "x": 745,
+      "y": 292,
+      "type": "room_door",
+      "roomId": "gf_academic_section_3",
+      "label": "Academic Section Door"
+    },
+    {
+      "id": "node_corr_e_cr",
+      "floor": "ground",
+      "x": 725,
+      "y": 365,
+      "type": "corridor"
+    },
+    {
+      "id": "door_cr_6",
+      "floor": "ground",
+      "x": 660,
+      "y": 365,
+      "type": "room_door",
+      "roomId": "gf_cr_6",
+      "label": "CR Classroom Door"
+    },
+    {
+      "id": "door_toilet_5",
+      "floor": "ground",
+      "x": 750,
+      "y": 365,
+      "type": "room_door",
+      "roomId": "gf_washroom_5",
+      "label": "Toilet 5 Door"
+    },
+    {
+      "id": "door_toilet_4",
+      "floor": "ground",
+      "x": 800,
+      "y": 365,
+      "type": "room_door",
+      "roomId": "gf_washroom_4",
+      "label": "Toilet 4 Door"
+    },
+    {
+      "id": "node_corr_e_mid",
+      "floor": "ground",
+      "x": 725,
+      "y": 480,
+      "type": "corridor"
+    },
+    {
+      "id": "node_corr_e_hod",
+      "floor": "ground",
+      "x": 725,
+      "y": 576,
+      "type": "corridor"
+    },
+    {
+      "id": "door_hod",
+      "floor": "ground",
+      "x": 725,
+      "y": 560,
+      "type": "room_door",
+      "roomId": "gf_hod_cs",
+      "label": "HOD Room Door"
+    },
+    {
+      "id": "door_dept_lib",
+      "floor": "ground",
+      "x": 745,
+      "y": 576,
+      "type": "room_door",
+      "roomId": "gf_department_library",
+      "label": "Department Library Door"
+    },
+    {
+      "id": "node_corr_e_lab24",
+      "floor": "ground",
+      "x": 725,
+      "y": 674,
+      "type": "corridor"
+    },
+    {
+      "id": "door_lab_24",
+      "floor": "ground",
+      "x": 745,
+      "y": 674,
+      "type": "room_door",
+      "roomId": "gf_computer_lab_24",
+      "label": "Computer Lab 24 Door"
+    },
+    {
+      "id": "node_corr_e_lab25",
+      "floor": "ground",
+      "x": 725,
+      "y": 758,
+      "type": "corridor"
+    },
+    {
+      "id": "door_lab_25",
+      "floor": "ground",
+      "x": 745,
+      "y": 758,
+      "type": "room_door",
+      "roomId": "gf_computer_lab_25",
+      "label": "Computer Lab 25 Door"
+    },
+    {
+      "id": "node_corr_se_corner",
+      "floor": "ground",
+      "x": 725,
+      "y": 835,
+      "type": "corridor"
+    },
+    {
+      "id": "door_lab_27",
+      "floor": "ground",
+      "x": 800,
+      "y": 850,
+      "type": "room_door",
+      "roomId": "gf_computer_lab_27",
+      "label": "Computer Lab 27 Door"
+    },
+    {
+      "id": "door_server_room",
+      "floor": "ground",
+      "x": 695,
+      "y": 850,
+      "type": "room_door",
+      "roomId": "gf_server_room",
+      "label": "Server Room Door"
+    },
+    {
+      "id": "node_corr_s_lab28",
+      "floor": "ground",
+      "x": 617,
+      "y": 835,
+      "type": "corridor"
+    },
+    {
+      "id": "door_lab_28",
+      "floor": "ground",
+      "x": 617,
+      "y": 850,
+      "type": "room_door",
+      "roomId": "gf_computer_lab_28",
+      "label": "Computer Lab 28 Door"
+    },
+    {
+      "id": "node_corr_s_lab29",
+      "floor": "ground",
+      "x": 512,
+      "y": 835,
+      "type": "corridor"
+    },
+    {
+      "id": "door_lab_29",
+      "floor": "ground",
+      "x": 512,
+      "y": 850,
+      "type": "room_door",
+      "roomId": "gf_computer_lab_29",
+      "label": "Computer Lab 29 Door"
+    },
+    {
+      "id": "node_corr_s_lab30",
+      "floor": "ground",
+      "x": 404,
+      "y": 835,
+      "type": "corridor"
+    },
+    {
+      "id": "door_lab_30",
+      "floor": "ground",
+      "x": 404,
+      "y": 850,
+      "type": "room_door",
+      "roomId": "gf_computer_lab_30",
+      "label": "Computer Lab 30 Door"
+    },
+    {
+      "id": "node_corr_s_spine",
+      "floor": "ground",
+      "x": 348,
+      "y": 835,
+      "type": "corridor"
+    },
+    {
+      "id": "door_admission_37",
+      "floor": "ground",
+      "x": 262,
+      "y": 850,
+      "type": "room_door",
+      "roomId": "gf_admission_section_37",
+      "label": "Admission Section Door"
+    },
+    {
+      "id": "door_exam_8",
+      "floor": "ground",
+      "x": 455,
+      "y": 189,
+      "type": "room_door",
+      "roomId": "gf_examination_8",
+      "label": "Examination Section Door"
+    },
+    {
+      "id": "node_corr_spine_mid",
+      "floor": "ground",
+      "x": 455,
+      "y": 270,
+      "type": "corridor"
+    },
+    {
+      "id": "door_estab_7",
+      "floor": "ground",
+      "x": 455,
+      "y": 250,
+      "type": "room_door",
+      "roomId": "gf_establishment_7",
+      "label": "Establishment Section Door"
+    },
+    {
+      "id": "node_corr_stair4",
+      "floor": "ground",
+      "x": 365,
+      "y": 340,
+      "type": "corridor"
+    },
+    {
+      "id": "door_stair_4",
+      "floor": "ground",
+      "x": 380,
+      "y": 325,
+      "type": "staircase",
+      "label": "Stair 4 Door"
+    },
+    {
+      "id": "door_seminar_19",
+      "floor": "ground",
+      "x": 302,
+      "y": 365,
+      "type": "room_door",
+      "roomId": "gf_seminar_hall_19",
+      "label": "Seminar Hall Door"
+    },
+    {
+      "id": "node_corr_seminar_s",
+      "floor": "ground",
+      "x": 302,
+      "y": 465,
+      "type": "corridor"
+    },
+    {
+      "id": "node_corr_maint_20",
+      "floor": "ground",
+      "x": 400,
+      "y": 440,
+      "type": "corridor"
+    },
+    {
+      "id": "door_maint_20",
+      "floor": "ground",
+      "x": 430,
+      "y": 440,
+      "type": "room_door",
+      "roomId": "gf_maintenance_office_20",
+      "label": "Maintenance Office Door"
+    },
+    {
+      "id": "node_corr_stair5",
+      "floor": "ground",
+      "x": 510,
+      "y": 440,
+      "type": "corridor"
+    },
+    {
+      "id": "door_stair_5",
+      "floor": "ground",
+      "x": 510,
+      "y": 400,
+      "type": "staircase",
+      "label": "Stair 5 Door"
+    },
+    {
+      "id": "node_corr_study_21",
+      "floor": "ground",
+      "x": 400,
+      "y": 540,
+      "type": "corridor"
+    },
+    {
+      "id": "door_study_21",
+      "floor": "ground",
+      "x": 430,
+      "y": 574,
+      "type": "room_door",
+      "roomId": "gf_study_space_21",
+      "label": "Study Space 21 Door"
+    },
+    {
+      "id": "node_corr_cs_staff",
+      "floor": "ground",
+      "x": 510,
+      "y": 540,
+      "type": "corridor"
+    },
+    {
+      "id": "door_comp_maint_22",
+      "floor": "ground",
+      "x": 510,
+      "y": 576,
+      "type": "room_door",
+      "roomId": "gf_computer_maintenance_22",
+      "label": "Computer Maintenance Door"
+    },
+    {
+      "id": "door_cs_staff_23",
+      "floor": "ground",
+      "x": 570,
+      "y": 540,
+      "type": "room_door",
+      "roomId": "gf_cs_staff_room_23",
+      "label": "CS Staff Room Door"
+    },
+    {
+      "id": "node_corr_c1_nw",
+      "floor": "ground",
+      "x": 468,
+      "y": 630,
+      "type": "corridor"
+    },
+    {
+      "id": "door_study_33",
+      "floor": "ground",
+      "x": 500,
+      "y": 674,
+      "type": "room_door",
+      "roomId": "gf_study_space_33",
+      "label": "Study Space 33 Door"
+    },
+    {
+      "id": "door_innov_32",
+      "floor": "ground",
+      "x": 454,
+      "y": 630,
+      "type": "room_door",
+      "roomId": "gf_innovation_lab_32",
+      "label": "Innovation Lab Door"
+    },
+    {
+      "id": "node_corr_record_34",
+      "floor": "ground",
+      "x": 392,
+      "y": 630,
+      "type": "corridor"
+    },
+    {
+      "id": "door_record_34",
+      "floor": "ground",
+      "x": 392,
+      "y": 650,
+      "type": "room_door",
+      "roomId": "gf_record_room_34",
+      "label": "Record Room Door"
+    },
+    {
+      "id": "door_store_35",
+      "floor": "ground",
+      "x": 345,
+      "y": 630,
+      "type": "room_door",
+      "roomId": "gf_store_room_35",
+      "label": "Store Room 35 Door"
+    },
+    {
+      "id": "door_stair_6",
+      "floor": "ground",
+      "x": 270,
+      "y": 630,
+      "type": "staircase",
+      "label": "Stair 6 Door"
+    },
+    {
+      "id": "node_corr_guest_36",
+      "floor": "ground",
+      "x": 348,
+      "y": 710,
+      "type": "corridor"
+    },
+    {
+      "id": "door_guest_36",
+      "floor": "ground",
+      "x": 310,
+      "y": 710,
+      "type": "room_door",
+      "roomId": "gf_guest_lounge_36",
+      "label": "Guest Lounge Door"
+    },
+    {
+      "id": "door_coe_31",
+      "floor": "ground",
+      "x": 459,
+      "y": 730,
+      "type": "room_door",
+      "roomId": "gf_center_for_excellence_31",
+      "label": "Center for Excellence Door"
+    },
+    {
+      "id": "node_corr_c1_n",
+      "floor": "ground",
+      "x": 600,
+      "y": 630,
+      "type": "corridor"
+    }
+  ]
+}
