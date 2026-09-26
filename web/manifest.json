@@ -1,11 +1,11 @@
 {
-    "name": "sahyadri_ar",
-    "short_name": "sahyadri_ar",
+    "name": "Mapo - The Sahyadri AR",
+    "short_name": "Mapo AR",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#2563EB",
+    "theme_color": "#2563EB",
+    "description": "Mapo - The Sahyadri AR Campus Indoor Navigation.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

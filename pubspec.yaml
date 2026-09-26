@@ -10,6 +10,8 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  flutter_web_plugins:
+    sdk: flutter
 
   # UI & Icons
   cupertino_icons: ^1.0.8
@@ -37,6 +39,8 @@ dependencies:
   cloud_firestore: ^5.6.5
   vector_math: ^2.1.4
   camera_web: ^0.3.5+6
+  camera_windows: ^0.3.0
+  web: ^1.1.1
 
 dev_dependencies:
   flutter_test:
@@ -47,6 +51,9 @@ flutter:
   uses-material-design: true
 
   assets:
-    - lib/data/rooms.json
-    - lib/data/navigation/
+    - assets/data/
+    - assets/maps/
+    - assets/navigation/
     - assets/images/
+    - lib/data/
+    - lib/data/navigation/

@@ -26,7 +26,12 @@ class NavigationService {
 
     try {
       // 1. Load Ground Floor Nodes
-      final nodesStr = await rootBundle.loadString('lib/data/navigation/ground_floor_nodes.json');
+      String nodesStr;
+      try {
+        nodesStr = await rootBundle.loadString('assets/navigation/ground_floor_nodes.json');
+      } catch (_) {
+        nodesStr = await rootBundle.loadString('lib/data/navigation/ground_floor_nodes.json');
+      }
       final nodesJson = json.decode(nodesStr) as Map<String, dynamic>;
       final rawNodes = (nodesJson['nodes'] as List<dynamic>)
           .map((item) => NavigationNode.fromJson(item as Map<String, dynamic>))
@@ -41,7 +46,12 @@ class NavigationService {
       }
 
       // 2. Load Ground Floor Edges
-      final edgesStr = await rootBundle.loadString('lib/data/navigation/ground_floor_edges.json');
+      String edgesStr;
+      try {
+        edgesStr = await rootBundle.loadString('assets/navigation/ground_floor_edges.json');
+      } catch (_) {
+        edgesStr = await rootBundle.loadString('lib/data/navigation/ground_floor_edges.json');
+      }
       final edgesJson = json.decode(edgesStr) as Map<String, dynamic>;
       final rawEdges = (edgesJson['edges'] as List<dynamic>)
           .map((item) => NavigationEdge.fromJson(item as Map<String, dynamic>))
@@ -53,6 +63,185 @@ class NavigationService {
     } catch (e) {
       debugPrint('⚠️ Error initializing NavigationService: $e');
     }
+  }
+
+  /// Manually populates navigation data for a floor (useful for tests or Firestore data sync)
+  void loadDataForFloor({
+    required String floor,
+    required List<NavigationNode> nodes,
+    required List<NavigationEdge> edges,
+  }) {
+    _nodesByFloor[floor] = List.from(nodes);
+    for (final n in nodes) {
+      _nodesById[n.id] = n;
+      if (n.roomId != null && n.roomId!.isNotEmpty) {
+        _roomDoorMap[n.roomId!] = n.id;
+      }
+    }
+    _edgesByFloor[floor] = List.from(edges);
+    _initialized = true;
+  }
+
+  Map<String, String> get roomDoorMap => Map.unmodifiable(_roomDoorMap);
+
+  void setRoomDoor(String roomId, String doorNodeId) {
+    _roomDoorMap[roomId] = doorNodeId;
+  }
+
+  void setRoomDoorMap(Map<String, String> map) {
+    _roomDoorMap.addAll(map);
+  }
+
+  void addOrUpdateNode(NavigationNode node) {
+    _nodesById[node.id] = node;
+    final floorNodes = _nodesByFloor.putIfAbsent(node.floor, () => []);
+    final idx = floorNodes.indexWhere((n) => n.id == node.id);
+    if (idx >= 0) {
+      floorNodes[idx] = node;
+    } else {
+      floorNodes.add(node);
+    }
+    if (node.roomId != null && node.roomId!.isNotEmpty) {
+      _roomDoorMap[node.roomId!] = node.id;
+    }
+  }
+
+  void removeNode(String nodeId, {String floor = 'ground'}) {
+    _nodesById.remove(nodeId);
+    _nodesByFloor[floor]?.removeWhere((n) => n.id == nodeId);
+    _edgesByFloor[floor]?.removeWhere(
+        (e) => e.fromNode == nodeId || e.toNode == nodeId);
+    _roomDoorMap.removeWhere((k, v) => v == nodeId);
+  }
+
+  void addEdge(NavigationEdge edge, {String floor = 'ground'}) {
+    final floorEdges = _edgesByFloor.putIfAbsent(floor, () => []);
+    floorEdges.removeWhere((e) =>
+        (e.fromNode == edge.fromNode && e.toNode == edge.toNode) ||
+        (e.fromNode == edge.toNode && e.toNode == edge.fromNode));
+    floorEdges.add(edge);
+  }
+
+  void removeEdge(String from, String to, {String floor = 'ground'}) {
+    _edgesByFloor[floor]?.removeWhere((e) =>
+        (e.fromNode == from && e.toNode == to) ||
+        (e.fromNode == to && e.toNode == from));
+  }
+
+  /// Converts a NavigationRoute into a GeoJSON FeatureCollection string for Mapbox.
+  String routeToGeoJson(NavigationRoute route) {
+    if (route.nodes.isEmpty) {
+      return '{"type":"FeatureCollection","features":[]}';
+    }
+
+    final coordinates = route.nodes.map((n) => [n.lng, n.lat]).toList();
+
+    final features = <Map<String, dynamic>>[
+      {
+        'type': 'Feature',
+        'id': 'route_line',
+        'properties': {
+          'type': 'route',
+          'distance': route.totalDistance,
+          'duration': route.estimatedWalkingMinutes,
+        },
+        'geometry': {
+          'type': 'LineString',
+          'coordinates': coordinates,
+        },
+      },
+      {
+        'type': 'Feature',
+        'id': 'route_start',
+        'properties': {
+          'type': 'start',
+          'label': route.nodes.first.label ?? 'Start',
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [route.nodes.first.lng, route.nodes.first.lat],
+        },
+      },
+      {
+        'type': 'Feature',
+        'id': 'route_destination',
+        'properties': {
+          'type': 'destination',
+          'label': route.nodes.last.label ?? 'Destination',
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [route.nodes.last.lng, route.nodes.last.lat],
+        },
+      },
+    ];
+
+    return json.encode({
+      'type': 'FeatureCollection',
+      'features': features,
+    });
+  }
+
+  /// Returns GeoJSON representation of debug nodes for Mapbox visualization
+  String debugNodesToGeoJson(String floor) {
+    final nodes = getNodesForFloor(floor);
+    final features = nodes.map((n) {
+      return {
+        'type': 'Feature',
+        'id': 'debug_node_${n.id}',
+        'properties': {
+          'id': n.id,
+          'type': n.type.name,
+          'label': n.label ?? n.id,
+          'roomId': n.roomId ?? '',
+          'isDoor': n.type == NodeType.roomDoor,
+          'isStair': n.type == NodeType.staircase,
+        },
+        'geometry': {
+          'type': 'Point',
+          'coordinates': [n.lng, n.lat],
+        },
+      };
+    }).toList();
+
+    return json.encode({
+      'type': 'FeatureCollection',
+      'features': features,
+    });
+  }
+
+  /// Returns GeoJSON representation of debug edges for Mapbox visualization
+  String debugEdgesToGeoJson(String floor) {
+    final edges = getEdgesForFloor(floor);
+    final features = <Map<String, dynamic>>[];
+
+    for (int i = 0; i < edges.length; i++) {
+      final edge = edges[i];
+      final from = _nodesById[edge.fromNode];
+      final to = _nodesById[edge.toNode];
+      if (from == null || to == null) continue;
+
+      features.add({
+        'type': 'Feature',
+        'id': 'debug_edge_$i',
+        'properties': {
+          'distance': edge.distance,
+          'accessible': edge.accessible,
+        },
+        'geometry': {
+          'type': 'LineString',
+          'coordinates': [
+            [from.lng, from.lat],
+            [to.lng, to.lat],
+          ],
+        },
+      });
+    }
+
+    return json.encode({
+      'type': 'FeatureCollection',
+      'features': features,
+    });
   }
 
   List<NavigationNode> getNodesForFloor(String floor) => _nodesByFloor[floor] ?? [];
@@ -70,6 +259,56 @@ class NavigationService {
       if (node.roomId == roomId) return node;
     }
     return null;
+  }
+
+  /// Finds the nearest valid navigation node on the universal graph for given (x, y) coordinates
+  NavigationNode? findNearestNode(double x, double y, {String floor = 'ground'}) {
+    final nodes = getNodesForFloor(floor);
+    if (nodes.isEmpty) return null;
+    NavigationNode? closest;
+    double minDist = double.infinity;
+    for (final n in nodes) {
+      final dx = n.x - x;
+      final dy = n.y - y;
+      final distSq = dx * dx + dy * dy;
+      if (distSq < minDist) {
+        minDist = distSq;
+        closest = n;
+      }
+    }
+    return closest;
+  }
+
+  /// Finds route from user coordinate (x, y) on campus map to destination room door node
+  NavigationRoute findRouteFromCoordinates({
+    required double startX,
+    required double startY,
+    required String destinationRoomId,
+    String floor = 'ground',
+  }) {
+    final destNode = getNodeForRoom(destinationRoomId);
+    if (destNode == null) {
+      debugPrint('⚠️ No door node found for room $destinationRoomId');
+      return const NavigationRoute(
+        nodes: [],
+        totalDistance: 0.0,
+        estimatedWalkingMinutes: 0,
+        instructions: [],
+      );
+    }
+
+    final nearestStartNode = findNearestNode(startX, startY, floor: floor);
+    if (nearestStartNode == null) {
+      debugPrint('⚠️ No navigation node found on floor $floor');
+      return const NavigationRoute(
+        nodes: [],
+        totalDistance: 0.0,
+        estimatedWalkingMinutes: 0,
+        instructions: [],
+      );
+    }
+
+    return findRoute(nearestStartNode.id, destNode.id);
   }
 
   /// Calculates total distance in meters along a node path
@@ -98,7 +337,17 @@ class NavigationService {
       );
     }
 
-    final start = _nodesById[startNodeId];
+    // Fallback for start node if specified startNodeId is not found
+    var start = _nodesById[startNodeId];
+    if (start == null) {
+      final floorNodes = _nodesByFloor.values.expand((l) => l).toList();
+      // Try to find an entrance node first
+      start = floorNodes.cast<NavigationNode?>().firstWhere(
+        (n) => n?.type == NodeType.entrance,
+        orElse: () => floorNodes.isNotEmpty ? floorNodes.first : null,
+      );
+    }
+
     final dest = _nodesById[destinationNodeId];
     if (start == null || dest == null) {
       debugPrint('⚠️ Invalid start ($startNodeId) or destination ($destinationNodeId)');
@@ -110,12 +359,20 @@ class NavigationService {
       );
     }
 
-    // Build adjacency list for the floor
+    // Build adjacency list for the floor (bidirectional by default)
     final floorEdges = _edgesByFloor[start.floor] ?? [];
     final Map<String, List<NavigationEdge>> adj = {};
     for (final e in floorEdges) {
-      if (!e.accessible) continue;
+      if (!e.accessible || !e.enabled) continue;
       adj.setdefault(e.fromNode, []).add(e);
+      adj.setdefault(e.toNode, []).add(NavigationEdge(
+        fromNode: e.toNode,
+        toNode: e.fromNode,
+        distance: e.distance,
+        accessible: e.accessible,
+        floor: e.floor,
+        enabled: e.enabled,
+      ));
     }
 
     // Dijkstra Priority Queue / distances

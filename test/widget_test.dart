@@ -1,30 +1,48 @@
-// This is a basic Flutter widget test.
-//
-// To perform an interaction with a widget in your test, use the WidgetTester
-// utility in the flutter_test package. For example, you can send tap and scroll
-// gestures. You can also use WidgetTester to find child widgets in the widget
-// tree, read text, and verify that the values of widget properties are correct.
-
-import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-
-import 'package:sahyadri_ar/main.dart';
+import 'package:sahyadri_ar/models/navigation_edge.dart';
+import 'package:sahyadri_ar/models/navigation_node.dart';
+import 'package:sahyadri_ar/services/navigation_service.dart';
 
 void main() {
-  testWidgets('App renders test', (WidgetTester tester) async {
-    // Build our app and trigger a frame.
-    await tester.pumpWidget(const SahyadriApp());
+  test('Admin graph models and navigation service integrity test', () {
+    final nodeA = NavigationNode(
+      id: 'GF_ENTRANCE_TEST',
+      floor: 'ground',
+      x: 100.0,
+      y: 200.0,
+      type: NodeType.entrance,
+      label: 'Main Gate Test',
+    );
 
-    // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    final nodeB = NavigationNode(
+      id: 'GF_CORRIDOR_TEST',
+      floor: 'ground',
+      x: 150.0,
+      y: 200.0,
+      type: NodeType.corridor,
+      label: 'Corridor Test',
+    );
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
-    await tester.pump();
+    final edge = NavigationEdge(
+      fromNode: nodeA.id,
+      toNode: nodeB.id,
+      distance: 5.5,
+      floor: 'ground',
+      enabled: true,
+    );
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
-    expect(find.text('1'), findsOneWidget);
+    expect(nodeA.type, NodeType.entrance);
+    expect(nodeB.type, NodeType.corridor);
+    expect(edge.distance, 5.5);
+    expect(edge.enabled, true);
+
+    // Test NavigationService live updates
+    final navService = NavigationService();
+    navService.addOrUpdateNode(nodeA);
+    navService.addOrUpdateNode(nodeB);
+    navService.addEdge(edge);
+
+    expect(navService.getNodeById(nodeA.id), isNotNull);
+    expect(navService.getNodeById(nodeB.id), isNotNull);
   });
 }

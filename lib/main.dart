@@ -22,6 +22,7 @@ import 'package:provider/provider.dart';
 
 import 'providers/app_state.dart';
 import 'router/app_router.dart';
+import 'services/camera_initializer.dart';
 import 'services/navigation_service.dart';
 import 'services/search_service.dart';
 import 'theme/app_theme.dart';
@@ -51,7 +52,10 @@ void main() async {
     }
   }
 
-  // ── Pre-load room data & navigation graph ──
+  // ── Initialize Camera plugin across platforms ──
+  initCameraPlugin();
+
+  // ── Pre-load room data, navigation graph & floor plan ──
   await SearchService().init();
   await NavigationService().init();
 
@@ -69,7 +73,7 @@ class SahyadriApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp.router(
-      title: 'Sahyadri AR',
+      title: 'Mapo - The Sahyadri AR',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
       routerConfig: appRouter,

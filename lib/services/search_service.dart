@@ -35,7 +35,12 @@ class SearchService {
   Future<void> init() async {
     if (_loaded) return;
     try {
-      final jsonString = await rootBundle.loadString('lib/data/rooms.json');
+      String jsonString;
+      try {
+        jsonString = await rootBundle.loadString('assets/data/rooms.json');
+      } catch (_) {
+        jsonString = await rootBundle.loadString('lib/data/rooms.json');
+      }
       final Map<String, dynamic> data = json.decode(jsonString);
       final List<dynamic> rawRooms = data['rooms'] as List<dynamic>;
       _rooms = rawRooms.map((r) => Room.fromJson(r as Map<String, dynamic>)).toList();

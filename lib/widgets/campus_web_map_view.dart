@@ -1698,7 +1698,7 @@ class _GroundFloorPainter extends CustomPainter {
 
 // ─────────────────────────────────────────────────────────────
 //  Navigation Route Painter — Dijkstra shortest path with
-//  directional animated walking arrows and start/dest badges.
+//  luminous dotted guide trail and animated directional arrows
 // ─────────────────────────────────────────────────────────────
 class _NavigationRoutePainter extends CustomPainter {
   final NavigationRoute route;
@@ -1713,31 +1713,60 @@ class _NavigationRoutePainter extends CustomPainter {
   void paint(Canvas canvas, Size size) {
     if (route.nodes.length < 2) return;
 
+    final glowPaint = Paint()
+      ..color = const Color(0xFF0284C7).withValues(alpha: 0.18)
+      ..strokeWidth = 10.0
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round
+      ..strokeJoin = StrokeJoin.round;
+
+    final baseGuidePaint = Paint()
+      ..color = const Color(0xFF0284C7).withValues(alpha: 0.35)
+      ..strokeWidth = 2.0
+      ..style = PaintingStyle.stroke
+      ..strokeCap = StrokeCap.round;
+
     final path = Path();
     path.moveTo(route.nodes.first.x, route.nodes.first.y);
     for (int i = 1; i < route.nodes.length; i++) {
       path.lineTo(route.nodes[i].x, route.nodes[i].y);
     }
-
-    // Outer vibrant glow
-    final glowPaint = Paint()
-      ..color = const Color(0xFF0284C7).withValues(alpha: 0.35)
-      ..strokeWidth = 9.0
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round;
     canvas.drawPath(path, glowPaint);
+    canvas.drawPath(path, baseGuidePaint);
 
-    // Inner navigation core
-    final corePaint = Paint()
-      ..color = const Color(0xFF0284C7)
-      ..strokeWidth = 4.2
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..strokeJoin = StrokeJoin.round;
-    canvas.drawPath(path, corePaint);
+    final dotHaloPaint = Paint()..style = PaintingStyle.fill;
+    final dotCorePaint = Paint()
+      ..color = const Color(0xFF38BDF8)
+      ..style = PaintingStyle.fill;
 
-    // Directional arrows along each segment (rotating toward next node)
+    // 1. Dotted path trail along every segment
+    const dotSpacing = 14.0;
+    for (int i = 0; i < route.nodes.length - 1; i++) {
+      final a = route.nodes[i];
+      final b = route.nodes[i + 1];
+      final dx = b.x - a.x;
+      final dy = b.y - a.y;
+      final segLen = math.sqrt(dx * dx + dy * dy);
+      if (segLen < 8.0) continue;
+
+      for (double d = 0; d <= segLen; d += dotSpacing) {
+        final t = d / segLen;
+        final px = a.x + dx * t;
+        final py = a.y + dy * t;
+
+        // Glow halo
+        dotHaloPaint.color = const Color(0xFF0284C7).withValues(alpha: 0.3);
+        canvas.drawCircle(Offset(px, py), 4.0, dotHaloPaint);
+
+        // Core bright dot
+        canvas.drawCircle(Offset(px, py), 2.2, dotCorePaint);
+      }
+    }
+
+    // 2. Animated dotted arrows leading in the direction of destination
+    const arrowSpacing = 38.0;
+    final arrowOffset = (pulseProgress * arrowSpacing) % arrowSpacing;
+
     for (int i = 0; i < route.nodes.length - 1; i++) {
       final a = route.nodes[i];
       final b = route.nodes[i + 1];
@@ -1747,10 +1776,8 @@ class _NavigationRoutePainter extends CustomPainter {
       if (segLen < 15.0) continue;
 
       final angle = math.atan2(dy, dx);
-      const step = 34.0;
-      final offset = (pulseProgress * step) % step;
 
-      for (double d = offset; d < segLen - 8.0; d += step) {
+      for (double d = arrowOffset; d < segLen - 8.0; d += arrowSpacing) {
         if (d < 6.0) continue;
         final t = d / segLen;
         final px = a.x + dx * t;
@@ -1760,14 +1787,23 @@ class _NavigationRoutePainter extends CustomPainter {
         canvas.translate(px, py);
         canvas.rotate(angle);
 
-        // Arrow chevron pointing in direction of travel
+        // Dotted arrow chevron: sharp, vivid leading arrow
         final arrowPath = Path()
-          ..moveTo(-3.5, -4.0)
-          ..lineTo(4.0, 0.0)
-          ..lineTo(-3.5, 4.0)
-          ..lineTo(-1.0, 0.0)
+          ..moveTo(-5.5, -6.0)
+          ..lineTo(6.5, 0.0)
+          ..lineTo(-5.5, 6.0)
+          ..lineTo(-2.5, 0.0)
           ..close();
 
+        // Shadow/glow for the arrow
+        canvas.drawPath(
+          arrowPath,
+          Paint()
+            ..color = const Color(0xFF0284C7).withValues(alpha: 0.6)
+            ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 3.0),
+        );
+
+        // Solid white/cyan chevron arrow
         canvas.drawPath(
           arrowPath,
           Paint()
@@ -1775,52 +1811,76 @@ class _NavigationRoutePainter extends CustomPainter {
             ..style = PaintingStyle.fill,
         );
 
+        // Distinct border on the arrow
+        canvas.drawPath(
+          arrowPath,
+          Paint()
+            ..color = const Color(0xFF0284C7)
+            ..strokeWidth = 1.2
+            ..style = PaintingStyle.stroke,
+        );
+
         canvas.restore();
       }
     }
 
-    // Start point marker (Green)
+    // 3. Start Point Marker (Green Pulsing Dot)
     final start = route.nodes.first;
     final startOffset = Offset(start.x, start.y);
     canvas.drawCircle(
       startOffset,
-      12.0 + (pulseProgress * 3.0),
-      Paint()..color = const Color(0xFF10B981).withValues(alpha: 0.30),
+      14.0 + (pulseProgress * 4.0),
+      Paint()..color = const Color(0xFF10B981).withValues(alpha: 0.25 * (1.0 - pulseProgress)),
     );
     canvas.drawCircle(
       startOffset,
-      7.0,
+      8.0,
       Paint()..color = const Color(0xFF10B981),
     );
     canvas.drawCircle(
       startOffset,
-      7.0,
+      8.0,
       Paint()
         ..color = Colors.white
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 2.0,
+        ..strokeWidth = 2.5,
     );
 
-    // Destination point marker (Red)
+    // 4. Destination Marker (Red Pulsing Pin & Target Arrow)
     final dest = route.nodes.last;
     final destOffset = Offset(dest.x, dest.y);
     canvas.drawCircle(
       destOffset,
-      12.0 + (pulseProgress * 3.0),
-      Paint()..color = const Color(0xFFEF4444).withValues(alpha: 0.30),
+      16.0 + (pulseProgress * 5.0),
+      Paint()..color = const Color(0xFFEF4444).withValues(alpha: 0.25 * (1.0 - pulseProgress)),
     );
     canvas.drawCircle(
       destOffset,
-      7.0,
+      9.0,
       Paint()..color = const Color(0xFFEF4444),
     );
     canvas.drawCircle(
       destOffset,
-      7.0,
+      9.0,
       Paint()
         ..color = Colors.white
         ..style = PaintingStyle.stroke
-        ..strokeWidth = 2.0,
+        ..strokeWidth = 2.5,
+    );
+
+    // Tiny destination icon / arrow inside pin
+    final destArrow = Path()
+      ..moveTo(dest.x - 3.5, dest.y - 2.0)
+      ..lineTo(dest.x, dest.y + 3.0)
+      ..lineTo(dest.x + 3.5, dest.y - 2.0);
+    canvas.drawPath(
+      destArrow,
+      Paint()
+        ..color = Colors.white
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = 2.0
+        ..strokeCap = StrokeCap.round
+        ..strokeJoin = StrokeJoin.round,
     );
   }
 

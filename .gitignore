@@ -46,3 +46,4 @@ app.*.map.json
 
 # Sensitive keys — do not commit
 android/gradle.properties
+.firebase/

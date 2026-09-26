@@ -1,0 +1,2915 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": "building_foundation",
+      "properties": {
+        "type": "building",
+        "name": "Academic Block - Ground Floor",
+        "fillColor": "#F8FAFC",
+        "strokeColor": "#0F172A",
+        "strokeWidth": 3,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8665228
+            ],
+            [
+              74.9260185,
+              12.8665228
+            ],
+            [
+              74.9260185,
+              12.8655194
+            ],
+            [
+              74.9250315,
+              12.8655194
+            ],
+            [
+              74.9250315,
+              12.8665228
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_foundry_and_forging_46",
+      "properties": {
+        "type": "room",
+        "name": "Foundry & Forging",
+        "roomNumber": "46",
+        "category": "lab",
+        "fillColor": "#E0F2FE",
+        "strokeColor": "#0284C7",
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_stair_1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8665228
+            ],
+            [
+              74.9252152,
+              12.8665228
+            ],
+            [
+              74.9252152,
+              12.8664256
+            ],
+            [
+              74.9250315,
+              12.8664256
+            ],
+            [
+              74.9250315,
+              12.8665228
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_construction_office_45",
+      "properties": {
+        "type": "room",
+        "name": "Construction Office",
+        "roomNumber": "45",
+        "category": "office",
+        "fillColor": "#F1F5F9",
+        "strokeColor": "#64748B",
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_stair_1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9252152,
+              12.8665228
+            ],
+            [
+              74.925378,
+              12.8665228
+            ],
+            [
+              74.925378,
+              12.8664256
+            ],
+            [
+              74.9252152,
+              12.8664256
+            ],
+            [
+              74.9252152,
+              12.8665228
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "courtyard_3",
+      "properties": {
+        "type": "courtyard",
+        "name": "Courtyard 3",
+        "fillColor": "#E0E7FF",
+        "strokeColor": "#3B82F6",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250577,
+              12.8663993
+            ],
+            [
+              74.9252887,
+              12.8663993
+            ],
+            [
+              74.9252887,
+              12.8662194
+            ],
+            [
+              74.9250577,
+              12.8662194
+            ],
+            [
+              74.9250577,
+              12.8663993
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "courtyard_4",
+      "properties": {
+        "type": "courtyard",
+        "name": "Courtyard 4",
+        "fillColor": "#E0E7FF",
+        "strokeColor": "#3B82F6",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925441,
+              12.8663993
+            ],
+            [
+              74.9256825,
+              12.8663993
+            ],
+            [
+              74.9256825,
+              12.8662194
+            ],
+            [
+              74.925441,
+              12.8662194
+            ],
+            [
+              74.925441,
+              12.8663993
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "courtyard_2",
+      "properties": {
+        "type": "courtyard",
+        "name": "Courtyard 2",
+        "fillColor": "#E0E7FF",
+        "strokeColor": "#3B82F6",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250577,
+              12.8660931
+            ],
+            [
+              74.9252887,
+              12.8660931
+            ],
+            [
+              74.9252887,
+              12.8659667
+            ],
+            [
+              74.9250577,
+              12.8659667
+            ],
+            [
+              74.9250577,
+              12.8660931
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "courtyard_1",
+      "properties": {
+        "type": "courtyard",
+        "name": "Courtyard 1",
+        "fillColor": "#E0E7FF",
+        "strokeColor": "#3B82F6",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925588,
+              12.8659278
+            ],
+            [
+              74.925819,
+              12.8659278
+            ],
+            [
+              74.925819,
+              12.8657382
+            ],
+            [
+              74.925588,
+              12.8657382
+            ],
+            [
+              74.925588,
+              12.8659278
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_seminar_hall",
+      "properties": {
+        "type": "room",
+        "name": "Seminar Hall (Ground Floor)",
+        "roomNumber": "19",
+        "category": "hall",
+        "fillColor": "#FEE2E2",
+        "strokeColor": "#DC2626",
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_seminar_19"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250577,
+              12.8661903
+            ],
+            [
+              74.9252887,
+              12.8661903
+            ],
+            [
+              74.9252887,
+              12.8661028
+            ],
+            [
+              74.9250577,
+              12.8661028
+            ],
+            [
+              74.9250577,
+              12.8661903
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_central_library",
+      "properties": {
+        "type": "room",
+        "name": "Department Library",
+        "roomNumber": "LIB",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_dept_lib"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250577,
+              12.8658014
+            ],
+            [
+              74.9253097,
+              12.8658014
+            ],
+            [
+              74.9253097,
+              12.8655875
+            ],
+            [
+              74.9250577,
+              12.8655875
+            ],
+            [
+              74.9250577,
+              12.8658014
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_27",
+      "properties": {
+        "type": "room",
+        "name": "Computer Lab 27",
+        "roomNumber": "27",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_lab_27"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9258295,
+              12.8657042
+            ],
+            [
+              74.9259345,
+              12.8657042
+            ],
+            [
+              74.9259345,
+              12.8655583
+            ],
+            [
+              74.9258295,
+              12.8655583
+            ],
+            [
+              74.9258295,
+              12.8657042
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_28",
+      "properties": {
+        "type": "room",
+        "name": "Computer Lab 28",
+        "roomNumber": "28",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_lab_28"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9257245,
+              12.8657042
+            ],
+            [
+              74.925819,
+              12.8657042
+            ],
+            [
+              74.925819,
+              12.8655583
+            ],
+            [
+              74.9257245,
+              12.8655583
+            ],
+            [
+              74.9257245,
+              12.8657042
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_29",
+      "properties": {
+        "type": "room",
+        "name": "Computer Lab 29",
+        "roomNumber": "29",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_lab_29"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9256195,
+              12.8657042
+            ],
+            [
+              74.925714,
+              12.8657042
+            ],
+            [
+              74.925714,
+              12.8655583
+            ],
+            [
+              74.9256195,
+              12.8655583
+            ],
+            [
+              74.9256195,
+              12.8657042
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_30",
+      "properties": {
+        "type": "room",
+        "name": "Computer Lab 30",
+        "roomNumber": "30",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_lab_30"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9255145,
+              12.8657042
+            ],
+            [
+              74.925609,
+              12.8657042
+            ],
+            [
+              74.925609,
+              12.8655583
+            ],
+            [
+              74.9255145,
+              12.8655583
+            ],
+            [
+              74.9255145,
+              12.8657042
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_24",
+      "properties": {
+        "type": "room",
+        "name": "Computer Lab 24",
+        "roomNumber": "24",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_lab_24"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.92584,
+              12.8659278
+            ],
+            [
+              74.926008,
+              12.8659278
+            ],
+            [
+              74.926008,
+              12.8658403
+            ],
+            [
+              74.92584,
+              12.8658403
+            ],
+            [
+              74.92584,
+              12.8659278
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_25",
+      "properties": {
+        "type": "room",
+        "name": "Computer Lab 25",
+        "roomNumber": "25",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.5,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_lab_25"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.92584,
+              12.8658354
+            ],
+            [
+              74.926008,
+              12.8658354
+            ],
+            [
+              74.926008,
+              12.8657431
+            ],
+            [
+              74.92584,
+              12.8657431
+            ],
+            [
+              74.92584,
+              12.8658354
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_foundation_office_1",
+      "properties": {
+        "type": "room",
+        "name": "Foundation Office",
+        "roomNumber": "1",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_foundation_1"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9257455,
+              12.866409
+            ],
+            [
+              74.926008,
+              12.866409
+            ],
+            [
+              74.926008,
+              12.8663361
+            ],
+            [
+              74.9257455,
+              12.8663361
+            ],
+            [
+              74.9257455,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_principals_chamber_2",
+      "properties": {
+        "type": "room",
+        "name": "Principal's Chamber",
+        "roomNumber": "2",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_principal_2"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9257455,
+              12.8663361
+            ],
+            [
+              74.9259135,
+              12.8663361
+            ],
+            [
+              74.9259135,
+              12.8662583
+            ],
+            [
+              74.9257455,
+              12.8662583
+            ],
+            [
+              74.9257455,
+              12.8663361
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_academic_section_3",
+      "properties": {
+        "type": "room",
+        "name": "Academic Section",
+        "roomNumber": "3",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_academic_3"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9257455,
+              12.8662583
+            ],
+            [
+              74.9259135,
+              12.8662583
+            ],
+            [
+              74.9259135,
+              12.866166
+            ],
+            [
+              74.9257455,
+              12.866166
+            ],
+            [
+              74.9257455,
+              12.8662583
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_directors_chamber_10",
+      "properties": {
+        "type": "room",
+        "name": "Director's Chamber",
+        "roomNumber": "10",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_director_10"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925441,
+              12.866409
+            ],
+            [
+              74.925567,
+              12.866409
+            ],
+            [
+              74.925567,
+              12.8663312
+            ],
+            [
+              74.925441,
+              12.8663312
+            ],
+            [
+              74.925441,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_store_room_11",
+      "properties": {
+        "type": "room",
+        "name": "Store Room",
+        "roomNumber": "11",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_store_11"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9255754,
+              12.866409
+            ],
+            [
+              74.9256541,
+              12.866409
+            ],
+            [
+              74.9256541,
+              12.8663361
+            ],
+            [
+              74.9255754,
+              12.8663361
+            ],
+            [
+              74.9255754,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_health_centre_12",
+      "properties": {
+        "type": "room",
+        "name": "Health Centre",
+        "roomNumber": "12",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_health_12"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9256563,
+              12.866409
+            ],
+            [
+              74.9257434,
+              12.866409
+            ],
+            [
+              74.9257434,
+              12.8663361
+            ],
+            [
+              74.9256563,
+              12.8663361
+            ],
+            [
+              74.9256563,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_group_discussion_13",
+      "properties": {
+        "type": "room",
+        "name": "Group Discussion",
+        "roomNumber": "13",
+        "category": "hall",
+        "fillColor": "#FEE2E2",
+        "strokeColor": "#DC2626",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_gd_13"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925315,
+              12.866409
+            ],
+            [
+              74.925378,
+              12.866409
+            ],
+            [
+              74.925378,
+              12.8663312
+            ],
+            [
+              74.925315,
+              12.8663312
+            ],
+            [
+              74.925315,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_dept_placement_14",
+      "properties": {
+        "type": "room",
+        "name": "Department of Placement",
+        "roomNumber": "14",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_placement_14"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925378,
+              12.866409
+            ],
+            [
+              74.925441,
+              12.866409
+            ],
+            [
+              74.925441,
+              12.8663312
+            ],
+            [
+              74.925378,
+              12.8663312
+            ],
+            [
+              74.925378,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_examination_section_8",
+      "properties": {
+        "type": "room",
+        "name": "Examination Section",
+        "roomNumber": "8",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_exam_8"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925315,
+              12.8663312
+            ],
+            [
+              74.925441,
+              12.8663312
+            ],
+            [
+              74.925441,
+              12.8662535
+            ],
+            [
+              74.925315,
+              12.8662535
+            ],
+            [
+              74.925315,
+              12.8663312
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_establishment_section_7",
+      "properties": {
+        "type": "room",
+        "name": "Establishment Section",
+        "roomNumber": "7",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_estab_7"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925315,
+              12.8662535
+            ],
+            [
+              74.925441,
+              12.8662535
+            ],
+            [
+              74.925441,
+              12.8661757
+            ],
+            [
+              74.925315,
+              12.8661757
+            ],
+            [
+              74.925315,
+              12.8662535
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_maintenance_office_20",
+      "properties": {
+        "type": "room",
+        "name": "Maintenance Office",
+        "roomNumber": "20",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_maint_20"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9253549,
+              12.8661903
+            ],
+            [
+              74.9254809,
+              12.8661903
+            ],
+            [
+              74.9254809,
+              12.8661028
+            ],
+            [
+              74.9253549,
+              12.8661028
+            ],
+            [
+              74.9253549,
+              12.8661903
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_cr_classroom_6",
+      "properties": {
+        "type": "room",
+        "name": "CR (Classroom)",
+        "roomNumber": "6",
+        "category": "classroom",
+        "fillColor": "#F8FAFC",
+        "strokeColor": "#64748B",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_cr_6"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9257455,
+              12.866166
+            ],
+            [
+              74.9258295,
+              12.866166
+            ],
+            [
+              74.9258295,
+              12.8660882
+            ],
+            [
+              74.9257455,
+              12.8660882
+            ],
+            [
+              74.9257455,
+              12.866166
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_study_space_21",
+      "properties": {
+        "type": "room",
+        "name": "Study Space",
+        "roomNumber": "21",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_study_21"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9253549,
+              12.8660931
+            ],
+            [
+              74.9254389,
+              12.8660931
+            ],
+            [
+              74.9254389,
+              12.8659667
+            ],
+            [
+              74.9253549,
+              12.8659667
+            ],
+            [
+              74.9253549,
+              12.8660931
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_cs_maint_room_22",
+      "properties": {
+        "type": "room",
+        "name": "Computer Maintenance Room",
+        "roomNumber": "22",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_cs_maint_22"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925441,
+              12.8660931
+            ],
+            [
+              74.925567,
+              12.8660931
+            ],
+            [
+              74.925567,
+              12.8660347
+            ],
+            [
+              74.925441,
+              12.8660347
+            ],
+            [
+              74.925441,
+              12.8660931
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_cs_staff_room_23",
+      "properties": {
+        "type": "room",
+        "name": "Department of Computer Science Staff Room",
+        "roomNumber": "23",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_cs_staff_23"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925441,
+              12.8660347
+            ],
+            [
+              74.925693,
+              12.8660347
+            ],
+            [
+              74.925693,
+              12.8659667
+            ],
+            [
+              74.925441,
+              12.8659667
+            ],
+            [
+              74.925441,
+              12.8660347
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_innovation_lab_32",
+      "properties": {
+        "type": "room",
+        "name": "Innovation Lab",
+        "roomNumber": "32",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_innovation_32"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9253549,
+              12.8659278
+            ],
+            [
+              74.9254599,
+              12.8659278
+            ],
+            [
+              74.9254599,
+              12.8658111
+            ],
+            [
+              74.9253549,
+              12.8658111
+            ],
+            [
+              74.9253549,
+              12.8659278
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_discussion_area_40",
+      "properties": {
+        "type": "room",
+        "name": "Discussion Room",
+        "roomNumber": "40",
+        "category": "hall",
+        "fillColor": "#FEE2E2",
+        "strokeColor": "#DC2626",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_discussion_40"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9254683,
+              12.8659278
+            ],
+            [
+              74.9255838,
+              12.8659278
+            ],
+            [
+              74.9255838,
+              12.8658694
+            ],
+            [
+              74.9254683,
+              12.8658694
+            ],
+            [
+              74.9254683,
+              12.8659278
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_study_space_33",
+      "properties": {
+        "type": "room",
+        "name": "Study Space",
+        "roomNumber": "33",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_study_33"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9254683,
+              12.8658694
+            ],
+            [
+              74.9255838,
+              12.8658694
+            ],
+            [
+              74.9255838,
+              12.8658111
+            ],
+            [
+              74.9254683,
+              12.8658111
+            ],
+            [
+              74.9254683,
+              12.8658694
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_center_for_excellence_31",
+      "properties": {
+        "type": "room",
+        "name": "Center for Excellence",
+        "roomNumber": "31",
+        "category": "lab",
+        "fillColor": "#DBEAFE",
+        "strokeColor": "#2563EB",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_coe_31"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9253549,
+              12.8658111
+            ],
+            [
+              74.9255838,
+              12.8658111
+            ],
+            [
+              74.9255838,
+              12.8657285
+            ],
+            [
+              74.9253549,
+              12.8657285
+            ],
+            [
+              74.9253549,
+              12.8658111
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_record_room_34",
+      "properties": {
+        "type": "room",
+        "name": "Record Room",
+        "roomNumber": "34",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_record_34"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9253549,
+              12.8657236
+            ],
+            [
+              74.9254599,
+              12.8657236
+            ],
+            [
+              74.9254599,
+              12.8656458
+            ],
+            [
+              74.9253549,
+              12.8656458
+            ],
+            [
+              74.9253549,
+              12.8657236
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_store_room_35",
+      "properties": {
+        "type": "room",
+        "name": "Store Room",
+        "roomNumber": "35",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_store_35"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925462,
+              12.8657236
+            ],
+            [
+              74.9255565,
+              12.8657236
+            ],
+            [
+              74.9255565,
+              12.8656458
+            ],
+            [
+              74.925462,
+              12.8656458
+            ],
+            [
+              74.925462,
+              12.8657236
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_guests_lounge_36",
+      "properties": {
+        "type": "room",
+        "name": "Guest's Lounge",
+        "roomNumber": "36",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_guest_36"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925168,
+              12.8658208
+            ],
+            [
+              74.9253255,
+              12.8658208
+            ],
+            [
+              74.9253255,
+              12.8657333
+            ],
+            [
+              74.925168,
+              12.8657333
+            ],
+            [
+              74.925168,
+              12.8658208
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_visitors_lounge_38",
+      "properties": {
+        "type": "room",
+        "name": "Visitor's Lounge",
+        "roomNumber": "38",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_visitors_38"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8657139
+            ],
+            [
+              74.925168,
+              12.8657139
+            ],
+            [
+              74.925168,
+              12.8655778
+            ],
+            [
+              74.9250315,
+              12.8655778
+            ],
+            [
+              74.9250315,
+              12.8657139
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_admission_section_37",
+      "properties": {
+        "type": "room",
+        "name": "Admission Section",
+        "roomNumber": "37",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_admission_37"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925168,
+              12.8657139
+            ],
+            [
+              74.9253045,
+              12.8657139
+            ],
+            [
+              74.9253045,
+              12.8656361
+            ],
+            [
+              74.925168,
+              12.8656361
+            ],
+            [
+              74.925168,
+              12.8657139
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_fee_counter_39",
+      "properties": {
+        "type": "room",
+        "name": "Fee Counter",
+        "roomNumber": "39",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_fee_39"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925168,
+              12.8656342
+            ],
+            [
+              74.9253045,
+              12.8656342
+            ],
+            [
+              74.9253045,
+              12.8655778
+            ],
+            [
+              74.925168,
+              12.8655778
+            ],
+            [
+              74.925168,
+              12.8656342
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_stationery",
+      "properties": {
+        "type": "room",
+        "name": "Stationery",
+        "roomNumber": "",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_stationery"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925462,
+              12.865641
+            ],
+            [
+              74.9255565,
+              12.865641
+            ],
+            [
+              74.9255565,
+              12.8655778
+            ],
+            [
+              74.925462,
+              12.8655778
+            ],
+            [
+              74.925462,
+              12.865641
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_study_space_43",
+      "properties": {
+        "type": "room",
+        "name": "Study Space",
+        "roomNumber": "43",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_study_43"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8659278
+            ],
+            [
+              74.9251575,
+              12.8659278
+            ],
+            [
+              74.9251575,
+              12.8658257
+            ],
+            [
+              74.9250315,
+              12.8658257
+            ],
+            [
+              74.9250315,
+              12.8659278
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_student_room_41",
+      "properties": {
+        "type": "room",
+        "name": "Student Room",
+        "roomNumber": "41",
+        "category": "facility",
+        "fillColor": "#FEF3C7",
+        "strokeColor": "#D97706",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_student_41"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8658257
+            ],
+            [
+              74.925168,
+              12.8658257
+            ],
+            [
+              74.925168,
+              12.8657771
+            ],
+            [
+              74.9250315,
+              12.8657771
+            ],
+            [
+              74.9250315,
+              12.8658257
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_board_room_44",
+      "properties": {
+        "type": "room",
+        "name": "Board Room",
+        "roomNumber": "44",
+        "category": "office",
+        "fillColor": "#FEF2F2",
+        "strokeColor": "#E11D48",
+        "strokeWidth": 1.2,
+        "floor": "ground",
+        "level": 0,
+        "doorNodeId": "door_board_44"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8660882
+            ],
+            [
+              74.9250525,
+              12.8660882
+            ],
+            [
+              74.9250525,
+              12.8659618
+            ],
+            [
+              74.9250315,
+              12.8659618
+            ],
+            [
+              74.9250315,
+              12.8660882
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "corridor_0",
+      "properties": {
+        "type": "corridor",
+        "name": "Corridor",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#CBD5E1",
+        "strokeWidth": 1,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8659618
+            ],
+            [
+              74.9260185,
+              12.8659618
+            ],
+            [
+              74.9260185,
+              12.8659278
+            ],
+            [
+              74.9250315,
+              12.8659278
+            ],
+            [
+              74.9250315,
+              12.8659618
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "corridor_1",
+      "properties": {
+        "type": "corridor",
+        "name": "Corridor",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#CBD5E1",
+        "strokeWidth": 1,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9250315,
+              12.8661174
+            ],
+            [
+              74.9260185,
+              12.8661174
+            ],
+            [
+              74.9260185,
+              12.8660931
+            ],
+            [
+              74.9250315,
+              12.8660931
+            ],
+            [
+              74.9250315,
+              12.8661174
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "corridor_2",
+      "properties": {
+        "type": "corridor",
+        "name": "Corridor",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#CBD5E1",
+        "strokeWidth": 1,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9252887,
+              12.866409
+            ],
+            [
+              74.925315,
+              12.866409
+            ],
+            [
+              74.925315,
+              12.8656361
+            ],
+            [
+              74.9252887,
+              12.8656361
+            ],
+            [
+              74.9252887,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "corridor_3",
+      "properties": {
+        "type": "corridor",
+        "name": "Corridor",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#CBD5E1",
+        "strokeWidth": 1,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.9257035,
+              12.866409
+            ],
+            [
+              74.925735,
+              12.866409
+            ],
+            [
+              74.925735,
+              12.8656361
+            ],
+            [
+              74.9257035,
+              12.8656361
+            ],
+            [
+              74.9257035,
+              12.866409
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "corridor_4",
+      "properties": {
+        "type": "corridor",
+        "name": "Corridor",
+        "fillColor": "#FFFFFF",
+        "strokeColor": "#CBD5E1",
+        "strokeWidth": 1,
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              74.925168,
+              12.8657382
+            ],
+            [
+              74.925987,
+              12.8657382
+            ],
+            [
+              74.925987,
+              12.865709
+            ],
+            [
+              74.925168,
+              12.865709
+            ],
+            [
+              74.925168,
+              12.8657382
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_foundry_and_forging_46_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_foundry_and_forging_46",
+        "name": "Foundry & Forging",
+        "roomNumber": "46",
+        "label": "46 Foundry & Forging",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9251234,
+          12.8664742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_construction_office_45_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_construction_office_45",
+        "name": "Construction Office",
+        "roomNumber": "45",
+        "label": "45 Construction Office",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9252966,
+          12.8664742
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_seminar_hall_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_seminar_hall",
+        "name": "Seminar Hall (Ground Floor)",
+        "roomNumber": "19",
+        "label": "19 Seminar Hall (Ground Floor)",
+        "category": "hall",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9251732,
+          12.8661465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_central_library_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_central_library",
+        "name": "Department Library",
+        "roomNumber": "LIB",
+        "label": "LIB Department Library",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9251837,
+          12.8656944
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_27_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_computer_lab_27",
+        "name": "Computer Lab 27",
+        "roomNumber": "27",
+        "label": "27 Computer Lab 27",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925882,
+          12.8656312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_28_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_computer_lab_28",
+        "name": "Computer Lab 28",
+        "roomNumber": "28",
+        "label": "28 Computer Lab 28",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9257717,
+          12.8656312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_29_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_computer_lab_29",
+        "name": "Computer Lab 29",
+        "roomNumber": "29",
+        "label": "29 Computer Lab 29",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9256668,
+          12.8656312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_30_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_computer_lab_30",
+        "name": "Computer Lab 30",
+        "roomNumber": "30",
+        "label": "30 Computer Lab 30",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9255617,
+          12.8656312
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_24_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_computer_lab_24",
+        "name": "Computer Lab 24",
+        "roomNumber": "24",
+        "label": "24 Computer Lab 24",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925924,
+          12.8658841
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_computer_lab_25_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_computer_lab_25",
+        "name": "Computer Lab 25",
+        "roomNumber": "25",
+        "label": "25 Computer Lab 25",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925924,
+          12.8657892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_foundation_office_1_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_foundation_office_1",
+        "name": "Foundation Office",
+        "roomNumber": "1",
+        "label": "1 Foundation Office",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9258768,
+          12.8663725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_principals_chamber_2_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_principals_chamber_2",
+        "name": "Principal's Chamber",
+        "roomNumber": "2",
+        "label": "2 Principal's Chamber",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9258295,
+          12.8662972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_academic_section_3_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_academic_section_3",
+        "name": "Academic Section",
+        "roomNumber": "3",
+        "label": "3 Academic Section",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9258295,
+          12.8662122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_directors_chamber_10_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_directors_chamber_10",
+        "name": "Director's Chamber",
+        "roomNumber": "10",
+        "label": "10 Director's Chamber",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925504,
+          12.8663701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_store_room_11_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_store_room_11",
+        "name": "Store Room",
+        "roomNumber": "11",
+        "label": "11 Store Room",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9256147,
+          12.8663725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_health_centre_12_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_health_centre_12",
+        "name": "Health Centre",
+        "roomNumber": "12",
+        "label": "12 Health Centre",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9256999,
+          12.8663725
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_group_discussion_13_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_group_discussion_13",
+        "name": "Group Discussion",
+        "roomNumber": "13",
+        "label": "13 Group Discussion",
+        "category": "hall",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9253465,
+          12.8663701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_dept_placement_14_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_dept_placement_14",
+        "name": "Department of Placement",
+        "roomNumber": "14",
+        "label": "14 Department of Placement",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9254095,
+          12.8663701
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_examination_section_8_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_examination_section_8",
+        "name": "Examination Section",
+        "roomNumber": "8",
+        "label": "8 Examination Section",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925378,
+          12.8662923
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_establishment_section_7_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_establishment_section_7",
+        "name": "Establishment Section",
+        "roomNumber": "7",
+        "label": "7 Establishment Section",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925378,
+          12.8662146
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_maintenance_office_20_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_maintenance_office_20",
+        "name": "Maintenance Office",
+        "roomNumber": "20",
+        "label": "20 Maintenance Office",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9254179,
+          12.8661465
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_cr_classroom_6_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_cr_classroom_6",
+        "name": "CR (Classroom)",
+        "roomNumber": "6",
+        "label": "6 CR (Classroom)",
+        "category": "classroom",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9257875,
+          12.8661271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_study_space_21_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_study_space_21",
+        "name": "Study Space",
+        "roomNumber": "21",
+        "label": "21 Study Space",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9253969,
+          12.8660299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_cs_maint_room_22_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_cs_maint_room_22",
+        "name": "Computer Maintenance Room",
+        "roomNumber": "22",
+        "label": "22 Computer Maintenance Room",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925504,
+          12.8660639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_cs_staff_room_23_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_cs_staff_room_23",
+        "name": "Department of Computer Science Staff Room",
+        "roomNumber": "23",
+        "label": "23 Department of Computer Science Staff Room",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925567,
+          12.8660007
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_innovation_lab_32_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_innovation_lab_32",
+        "name": "Innovation Lab",
+        "roomNumber": "32",
+        "label": "32 Innovation Lab",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9254074,
+          12.8658694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_discussion_area_40_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_discussion_area_40",
+        "name": "Discussion Room",
+        "roomNumber": "40",
+        "label": "40 Discussion Room",
+        "category": "hall",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9255261,
+          12.8658986
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_study_space_33_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_study_space_33",
+        "name": "Study Space",
+        "roomNumber": "33",
+        "label": "33 Study Space",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9255261,
+          12.8658402
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_center_for_excellence_31_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_center_for_excellence_31",
+        "name": "Center for Excellence",
+        "roomNumber": "31",
+        "label": "31 Center for Excellence",
+        "category": "lab",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9254694,
+          12.8657698
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_record_room_34_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_record_room_34",
+        "name": "Record Room",
+        "roomNumber": "34",
+        "label": "34 Record Room",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9254074,
+          12.8656847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_store_room_35_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_store_room_35",
+        "name": "Store Room",
+        "roomNumber": "35",
+        "label": "35 Store Room",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9255093,
+          12.8656847
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_guests_lounge_36_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_guests_lounge_36",
+        "name": "Guest's Lounge",
+        "roomNumber": "36",
+        "label": "36 Guest's Lounge",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9252467,
+          12.8657771
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_visitors_lounge_38_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_visitors_lounge_38",
+        "name": "Visitor's Lounge",
+        "roomNumber": "38",
+        "label": "38 Visitor's Lounge",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9250998,
+          12.8656458
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_admission_section_37_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_admission_section_37",
+        "name": "Admission Section",
+        "roomNumber": "37",
+        "label": "37 Admission Section",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9252362,
+          12.865675
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_fee_counter_39_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_fee_counter_39",
+        "name": "Fee Counter",
+        "roomNumber": "39",
+        "label": "39 Fee Counter",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9252362,
+          12.865606
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_stationery_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_stationery",
+        "name": "Stationery",
+        "roomNumber": "",
+        "label": "Stationery",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9255093,
+          12.8656094
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_study_space_43_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_study_space_43",
+        "name": "Study Space",
+        "roomNumber": "43",
+        "label": "43 Study Space",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9250945,
+          12.8658767
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_student_room_41_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_student_room_41",
+        "name": "Student Room",
+        "roomNumber": "41",
+        "label": "41 Student Room",
+        "category": "facility",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9250998,
+          12.8658014
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "gf_board_room_44_label",
+      "properties": {
+        "type": "room_label",
+        "roomId": "gf_board_room_44",
+        "name": "Board Room",
+        "roomNumber": "44",
+        "label": "44 Board Room",
+        "category": "office",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.925042,
+          12.866025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "id": "poi_main_entry",
+      "properties": {
+        "type": "entrance",
+        "name": "Main Entry",
+        "label": "▲ MAIN ENTRY",
+        "floor": "ground",
+        "level": 0
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          74.9251953,
+          12.8656604
+        ]
+      }
+    }
+  ]
+}

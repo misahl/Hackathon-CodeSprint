@@ -23,13 +23,15 @@
   <!-- iOS meta tags & icons -->
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="sahyadri_ar">
+  <meta name="apple-mobile-web-app-title" content="Mapo - The Sahyadri AR">
   <link rel="apple-touch-icon" href="icons/Icon-192.png">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="favicon.png"/>
 
-  <title>Sahyadri AR</title>
+  <title>Mapo - The Sahyadri AR</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#2563EB">
   <link rel="manifest" href="manifest.json">
   <script>
     if ('caches' in window) {
@@ -46,9 +48,76 @@
         }
       });
     }
+
+    // ── Mapo Web Camera Integration ──────────────────────────────
+    window.__mapoActiveStream = null;
+
+    window.mapoStartCamera = async function(videoEl, onReadyCallback, onErrorCallback) {
+      try {
+        if (!navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) {
+          if (onErrorCallback) onErrorCallback("Camera access is not supported by your browser. Please use Chrome, Edge, or Safari.");
+          return;
+        }
+
+        // Try environment (back) camera first for AR navigation, fall back to any available camera
+        let stream;
+        try {
+          stream = await navigator.mediaDevices.getUserMedia({
+            video: {
+              facingMode: { ideal: "environment" },
+              width: { ideal: 1280 },
+              height: { ideal: 720 }
+            },
+            audio: false
+          });
+        } catch (camErr) {
+          console.warn("Could not get environment camera, falling back to default:", camErr);
+          stream = await navigator.mediaDevices.getUserMedia({
+            video: true,
+            audio: false
+          });
+        }
+
+        window.__mapoActiveStream = stream;
+
+        if (videoEl) {
+          videoEl.srcObject = stream;
+          videoEl.setAttribute("playsinline", "true");
+          videoEl.setAttribute("webkit-playsinline", "true");
+          videoEl.muted = true;
+          videoEl.autoplay = true;
+          try {
+            await videoEl.play();
+          } catch (pErr) {
+            console.warn("Video play promise error:", pErr);
+          }
+        }
+
+        if (onReadyCallback) onReadyCallback();
+      } catch (err) {
+        console.error("Camera error:", err);
+        var msg = "Camera access error: " + (err.message || err.name);
+        if (err.name === "NotAllowedError" || err.name === "PermissionDeniedError") {
+          msg = "Camera permission denied. Click the lock/tune icon in your browser address bar to allow camera access.";
+        } else if (err.name === "NotFoundError" || err.name === "DevicesNotFoundError") {
+          msg = "No camera device detected on this device.";
+        }
+        if (onErrorCallback) onErrorCallback(msg);
+      }
+    };
+
+    window.mapoStopCamera = function() {
+      if (window.__mapoActiveStream) {
+        var tracks = window.__mapoActiveStream.getTracks();
+        for (var i = 0; i < tracks.length; i++) {
+          tracks[i].stop();
+        }
+        window.__mapoActiveStream = null;
+      }
+    };
   </script>
 </head>
 <body>
-  <script src="flutter_bootstrap.js?v=2026092502" async></script>
+  <script src="flutter_bootstrap.js?v=2026092601" async></script>
 </body>
 </html>

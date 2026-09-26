@@ -1,9 +1,6 @@
 // ─────────────────────────────────────────────────────────────
-//  Home Screen — Sahyadri AR
-//  Premium, minimal campus navigation landing page.
-//  Design inspiration: restrained typography, generous whitespace,
-//  strong visual hierarchy (Apple design language applied to
-//  a campus navigation product).
+//  Home Screen — MAPO Campus Navigation
+//  Clean modern campus navigation landing page.
 // ─────────────────────────────────────────────────────────────
 
 import 'package:flutter/material.dart';
@@ -11,9 +8,11 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
-import '../providers/app_state.dart';
-import '../theme/app_theme.dart';
 import '../models/floor.dart';
+import '../models/room.dart';
+import '../providers/app_state.dart';
+import '../services/search_service.dart';
+import '../theme/app_theme.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -33,7 +32,7 @@ class _HomeScreenState extends State<HomeScreen>
     super.initState();
     _heroController = AnimationController(
       vsync: this,
-      duration: const Duration(milliseconds: 800),
+      duration: const Duration(milliseconds: 700),
     );
 
     _heroFade = CurvedAnimation(
@@ -42,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen>
     );
 
     _heroSlide = Tween<Offset>(
-      begin: const Offset(0, 0.06),
+      begin: const Offset(0, 0.05),
       end: Offset.zero,
     ).animate(CurvedAnimation(
       parent: _heroController,
@@ -70,12 +69,12 @@ class _HomeScreenState extends State<HomeScreen>
           child: CustomScrollView(
             physics: const BouncingScrollPhysics(),
             slivers: [
-              // ── Minimal Top Navigation Bar ─────────────────────
+              // ── Top Bar ─────────────────────────────────────────────
               SliverToBoxAdapter(
                 child: _buildTopBar(),
               ),
 
-              // ── Hero Section ───────────────────────────────────
+              // ── Hero Section ────────────────────────────────────────
               SliverToBoxAdapter(
                 child: FadeTransition(
                   opacity: _heroFade,
@@ -86,9 +85,9 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
               ),
 
-              // ── Search Field ───────────────────────────────────
+              // ── Search Field ────────────────────────────────────────
               SliverPadding(
-                padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
                 sliver: SliverToBoxAdapter(
                   child: FadeTransition(
                     opacity: _heroFade,
@@ -97,32 +96,31 @@ class _HomeScreenState extends State<HomeScreen>
                 ),
               ),
 
-              // ── Primary Actions ────────────────────────────────
+              // ── Primary Action Buttons ──────────────────────────────
               SliverPadding(
-                padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 28),
                 sliver: SliverToBoxAdapter(
                   child: _buildPrimaryActions(context),
                 ),
               ),
 
-              // ── Floor Selector ─────────────────────────────────
+              // ── Floor Selector ──────────────────────────────────────
               SliverPadding(
-                padding: const EdgeInsets.fromLTRB(24, 0, 24, 32),
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
                 sliver: SliverToBoxAdapter(
                   child: _buildFloorSelector(state),
                 ),
               ),
 
-              // ── Recent Destinations ────────────────────────────
-              if (state.recentRooms.isNotEmpty)
-                SliverPadding(
-                  padding: const EdgeInsets.fromLTRB(24, 0, 24, 16),
-                  sliver: SliverToBoxAdapter(
-                    child: _buildRecentSection(state),
-                  ),
+              // ── Featured & Recent Destinations ──────────────────────
+              SliverPadding(
+                padding: const EdgeInsets.fromLTRB(20, 0, 20, 24),
+                sliver: SliverToBoxAdapter(
+                  child: _buildRecentSection(context, state),
                 ),
+              ),
 
-              const SliverToBoxAdapter(child: SizedBox(height: 24)),
+              const SliverToBoxAdapter(child: SizedBox(height: 20)),
             ],
           ),
         ),
@@ -130,79 +128,119 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  // ── Top Bar ────────────────────────────────────────────────
+  // ── Top Bar ───────────────────────────────────────────────────
   Widget _buildTopBar() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 20, 24, 0),
+      padding: const EdgeInsets.fromLTRB(20, 16, 20, 0),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
-          // Logo mark
-          Container(
-            width: 34,
-            height: 34,
-            decoration: BoxDecoration(
-              color: AppTheme.primary,
-              borderRadius: BorderRadius.circular(9),
-            ),
-            child: const Icon(
-              Icons.navigation_rounded,
-              color: Colors.white,
-              size: 18,
-            ),
-          ),
-          const SizedBox(width: 10),
-          Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          Row(
             children: [
-              Text(
-                'Sahyadri AR',
-                style: GoogleFonts.inter(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: AppTheme.textPrimary,
-                  letterSpacing: -0.2,
+              Container(
+                width: 38,
+                height: 38,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(10),
+                  boxShadow: [
+                    BoxShadow(
+                      color: AppTheme.primary.withValues(alpha: 0.25),
+                      blurRadius: 8,
+                      offset: const Offset(0, 3),
+                    ),
+                  ],
+                ),
+                child: ClipRRect(
+                  borderRadius: BorderRadius.circular(10),
+                  child: Image.asset(
+                    'assets/images/mapo_logo.png',
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
-              Text(
-                'Campus Navigation',
-                style: GoogleFonts.inter(
-                  fontSize: 11,
-                  fontWeight: FontWeight.w500,
-                  color: AppTheme.textSecondary,
-                ),
+              const SizedBox(width: 10),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    'Mapo',
+                    style: GoogleFonts.inter(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w900,
+                      color: AppTheme.textPrimary,
+                      letterSpacing: 0.5,
+                    ),
+                  ),
+                  Text(
+                    'The Sahyadri AR',
+                    style: GoogleFonts.inter(
+                      fontSize: 11,
+                      fontWeight: FontWeight.w700,
+                      color: AppTheme.primary,
+                    ),
+                  ),
+                ],
               ),
             ],
+          ),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF1F5F9),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Row(
+              children: [
+                Container(
+                  width: 7,
+                  height: 7,
+                  decoration: const BoxDecoration(
+                    color: Color(0xFF10B981),
+                    shape: BoxShape.circle,
+                  ),
+                ),
+                const SizedBox(width: 6),
+                const Text(
+                  'Sahyadri Campus',
+                  style: TextStyle(
+                    fontSize: 11,
+                    fontWeight: FontWeight.w600,
+                    color: Color(0xFF475569),
+                  ),
+                ),
+              ],
+            ),
           ),
         ],
       ),
     );
   }
 
-  // ── Hero Section ────────────────────────────────────────────
+  // ── Hero Section ───────────────────────────────────────────────
   Widget _buildHeroSection() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(24, 48, 24, 40),
+      padding: const EdgeInsets.fromLTRB(20, 32, 20, 24),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(
-            'Find your way\naround Sahyadri.',
+            'Indoor Navigation\nMade Simple.',
             style: GoogleFonts.inter(
-              fontSize: 36,
-              fontWeight: FontWeight.w800,
+              fontSize: 32,
+              fontWeight: FontWeight.w900,
               color: AppTheme.textPrimary,
-              height: 1.12,
-              letterSpacing: -1.2,
+              height: 1.15,
+              letterSpacing: -1.0,
             ),
           ),
-          const SizedBox(height: 14),
+          const SizedBox(height: 10),
           Text(
-            'Indoor campus navigation with\nmaps and AR guidance.',
+            'Interactive indoor map & routing for classrooms, labs, and faculty offices.',
             style: GoogleFonts.inter(
-              fontSize: 16,
+              fontSize: 14,
               fontWeight: FontWeight.w400,
               color: AppTheme.textSecondary,
-              height: 1.5,
+              height: 1.45,
             ),
           ),
         ],
@@ -210,31 +248,39 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  // ── Search Field ────────────────────────────────────────────
+  // ── Search Field ───────────────────────────────────────────────
   Widget _buildSearchField(BuildContext context) {
     return GestureDetector(
       onTap: () => context.go('/search'),
       child: Container(
         height: 52,
+        padding: const EdgeInsets.symmetric(horizontal: 16),
         decoration: BoxDecoration(
-          color: const Color(0xFFF5F5F7),
-          borderRadius: BorderRadius.circular(14),
+          color: const Color(0xFFF8FAFC),
+          borderRadius: BorderRadius.circular(16),
+          border: Border.all(color: const Color(0xFFE2E8F0)),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black.withValues(alpha: 0.04),
+              blurRadius: 8,
+              offset: const Offset(0, 2),
+            ),
+          ],
         ),
         child: Row(
           children: [
-            const SizedBox(width: 14),
-            Icon(
+            const Icon(
               Icons.search_rounded,
-              color: AppTheme.textSecondary,
-              size: 20,
+              color: AppTheme.primary,
+              size: 22,
             ),
-            const SizedBox(width: 10),
+            const SizedBox(width: 12),
             Text(
-              'Search rooms, labs, offices and facilities',
+              'Search room, lab or office...',
               style: GoogleFonts.inter(
-                fontSize: 15,
+                fontSize: 14,
                 color: AppTheme.textSecondary,
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w500,
               ),
             ),
           ],
@@ -243,76 +289,99 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  // ── Primary Actions ─────────────────────────────────────────
+  // ── Primary Action Buttons ─────────────────────────────────────
   Widget _buildPrimaryActions(BuildContext context) {
-    return Column(
+    return Row(
       children: [
-        // Explore Campus
-        _PrimaryActionButton(
-          label: 'Explore Campus',
-          subtitle: 'Interactive indoor floor maps',
-          icon: Icons.map_outlined,
-          color: AppTheme.primary,
-          onTap: () => context.go('/map'),
+        // View Map Button
+        Expanded(
+          child: _ActionButton(
+            label: 'View Map',
+            subtitle: 'Interactive Mapbox',
+            icon: Icons.map_rounded,
+            backgroundColor: AppTheme.primary,
+            foregroundColor: Colors.white,
+            onTap: () => context.go('/map'),
+          ),
         ),
-        const SizedBox(height: 12),
-        // Start AR Navigation
-        _PrimaryActionButton(
-          label: 'Start AR Navigation',
-          subtitle: 'Live camera with direction overlay',
-          icon: Icons.view_in_ar_rounded,
-          color: const Color(0xFF1A1A2E),
-          onTap: () => context.push('/ar'),
+        const SizedBox(width: 12),
+        // AR Navigation Button
+        Expanded(
+          child: _ActionButton(
+            label: 'AR Navigation',
+            subtitle: 'Next Phase Preview',
+            icon: Icons.view_in_ar_rounded,
+            backgroundColor: const Color(0xFF0F172A),
+            foregroundColor: Colors.white,
+            onTap: () => context.push('/ar'),
+          ),
         ),
       ],
     );
   }
 
-  // ── Floor Selector ──────────────────────────────────────────
+  // ── Floor Selector ─────────────────────────────────────────────
   Widget _buildFloorSelector(AppState state) {
     final floors = [Floors.ground, Floors.first, Floors.second];
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Floor',
-          style: GoogleFonts.inter(
-            fontSize: 13,
-            fontWeight: FontWeight.w600,
-            color: AppTheme.textSecondary,
-            letterSpacing: 0.2,
-          ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              'Building Level',
+              style: GoogleFonts.inter(
+                fontSize: 13,
+                fontWeight: FontWeight.w700,
+                color: AppTheme.textPrimary,
+              ),
+            ),
+            Text(
+              'Ground Active',
+              style: GoogleFonts.inter(
+                fontSize: 12,
+                fontWeight: FontWeight.w600,
+                color: AppTheme.primary,
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 10),
         Row(
           children: floors.map((floor) {
             final isSelected = state.selectedFloor.id == floor.id;
-            return Padding(
-              padding: const EdgeInsets.only(right: 8),
-              child: GestureDetector(
-                onTap: () => state.selectFloor(floor),
-                child: AnimatedContainer(
-                  duration: const Duration(milliseconds: 200),
-                  curve: Curves.easeInOut,
-                  padding: const EdgeInsets.symmetric(
-                    horizontal: 16,
-                    vertical: 8,
-                  ),
-                  decoration: BoxDecoration(
-                    color: isSelected
-                        ? AppTheme.primary
-                        : const Color(0xFFF5F5F7),
-                    borderRadius: BorderRadius.circular(10),
-                  ),
-                  child: Text(
-                    floor.name,
-                    style: GoogleFonts.inter(
-                      fontSize: 13,
-                      fontWeight: FontWeight.w600,
+            return Expanded(
+              child: Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 4),
+                child: GestureDetector(
+                  onTap: () => state.selectFloor(floor),
+                  child: AnimatedContainer(
+                    duration: const Duration(milliseconds: 200),
+                    padding: const EdgeInsets.symmetric(vertical: 11),
+                    decoration: BoxDecoration(
                       color: isSelected
-                          ? Colors.white
-                          : AppTheme.textSecondary,
+                          ? AppTheme.primary
+                          : const Color(0xFFF1F5F9),
+                      borderRadius: BorderRadius.circular(12),
+                      border: Border.all(
+                        color: isSelected
+                            ? AppTheme.primary
+                            : Colors.transparent,
+                      ),
+                    ),
+                    child: Center(
+                      child: Text(
+                        floor.name,
+                        style: GoogleFonts.inter(
+                          fontSize: 12,
+                          fontWeight: FontWeight.w700,
+                          color: isSelected
+                              ? Colors.white
+                              : AppTheme.textSecondary,
+                        ),
+                      ),
                     ),
                   ),
                 ),
@@ -324,75 +393,171 @@ class _HomeScreenState extends State<HomeScreen>
     );
   }
 
-  // ── Recent Destinations ─────────────────────────────────────
-  Widget _buildRecentSection(AppState state) {
+  // ── Recent / Quick Destinations ────────────────────────────────
+  Widget _buildRecentSection(BuildContext context, AppState state) {
+    // Curated quick destinations if recent is empty, featuring Computer Lab 27
+    final List<Room> displayRooms = state.recentRooms.isNotEmpty
+        ? state.recentRooms
+        : [
+            SearchService().findById('gf_computer_lab_27') ??
+                const Room(
+                  id: 'gf_computer_lab_27',
+                  name: 'Computer Lab 27',
+                  roomNumber: '27',
+                  floor: 'ground',
+                  floorLevel: 0,
+                  category: RoomCategory.lab,
+                  description: 'Programming and CS laboratory',
+                  coordinates: RoomCoordinates(x: 800, y: 878),
+                ),
+            SearchService().findById('gf_principals_chamber_2') ??
+                const Room(
+                  id: 'gf_principals_chamber_2',
+                  name: "Principal's Chamber",
+                  roomNumber: '2',
+                  floor: 'ground',
+                  floorLevel: 0,
+                  category: RoomCategory.office,
+                  description: "Principal's administrative chamber",
+                  coordinates: RoomCoordinates(x: 790, y: 260),
+                ),
+            SearchService().findById('gf_seminar_hall') ??
+                const Room(
+                  id: 'gf_seminar_hall',
+                  name: 'Seminar Hall',
+                  roomNumber: '19',
+                  floor: 'ground',
+                  floorLevel: 0,
+                  category: RoomCategory.hall,
+                  description: 'Ground Floor seminar auditorium',
+                  coordinates: RoomCoordinates(x: 165, y: 415),
+                ),
+            SearchService().findById('gf_admission_section_37') ??
+                const Room(
+                  id: 'gf_admission_section_37',
+                  name: 'Admission Section',
+                  roomNumber: '37',
+                  floor: 'ground',
+                  floorLevel: 0,
+                  category: RoomCategory.office,
+                  description: 'Student admissions counter',
+                  coordinates: RoomCoordinates(x: 225, y: 900),
+                ),
+          ];
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(
-          'Recent',
-          style: GoogleFonts.inter(
-            fontSize: 13,
-            fontWeight: FontWeight.w600,
-            color: AppTheme.textSecondary,
-            letterSpacing: 0.2,
-          ),
-        ),
-        const SizedBox(height: 10),
-        ...state.recentRooms.take(3).map((room) {
-          final floorName = room.floor == 'ground'
-              ? 'Ground Floor'
-              : (room.floor == 'first' ? '1st Floor' : '2nd Floor');
-
-          return GestureDetector(
-            onTap: () {
-              state.selectRoom(room);
-              context.go('/map');
-            },
-            child: Container(
-              margin: const EdgeInsets.only(bottom: 8),
-              padding:
-                  const EdgeInsets.symmetric(horizontal: 14, vertical: 12),
-              decoration: BoxDecoration(
-                color: const Color(0xFFF5F5F7),
-                borderRadius: BorderRadius.circular(12),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Text(
+              state.recentRooms.isNotEmpty ? 'Recent Destinations' : 'Popular Destinations',
+              style: GoogleFonts.inter(
+                fontSize: 14,
+                fontWeight: FontWeight.w700,
+                color: AppTheme.textPrimary,
               ),
-              child: Row(
+            ),
+            TextButton(
+              onPressed: () => context.go('/search'),
+              child: const Text(
+                'See All',
+                style: TextStyle(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w600,
+                  color: AppTheme.primary,
+                ),
+              ),
+            ),
+          ],
+        ),
+        const SizedBox(height: 8),
+        ...displayRooms.take(4).map((room) {
+          final catColor = AppTheme.categoryColor(room.category.name);
+          final catIcon = AppTheme.categoryIcon(room.category.name);
+          final isDemoRoute = room.id == 'gf_computer_lab_27';
+
+          return Container(
+            margin: const EdgeInsets.only(bottom: 8),
+            decoration: BoxDecoration(
+              color: const Color(0xFFF8FAFC),
+              borderRadius: BorderRadius.circular(14),
+              border: Border.all(
+                color: isDemoRoute
+                    ? AppTheme.primary.withValues(alpha: 0.4)
+                    : const Color(0xFFE2E8F0),
+                width: isDemoRoute ? 1.5 : 1.0,
+              ),
+            ),
+            child: ListTile(
+              onTap: () {
+                state.selectRoom(room);
+                context.push('/room/${room.id}');
+              },
+              contentPadding:
+                  const EdgeInsets.symmetric(horizontal: 14, vertical: 2),
+              leading: Container(
+                width: 38,
+                height: 38,
+                decoration: BoxDecoration(
+                  color: catColor.withValues(alpha: 0.12),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: Icon(catIcon, color: catColor, size: 20),
+              ),
+              title: Row(
                 children: [
-                  Icon(
-                    Icons.history_rounded,
-                    size: 16,
-                    color: AppTheme.textSecondary,
-                  ),
-                  const SizedBox(width: 12),
                   Expanded(
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        Text(
-                          room.name,
-                          style: GoogleFonts.inter(
-                            fontSize: 14,
-                            fontWeight: FontWeight.w600,
-                            color: AppTheme.textPrimary,
-                          ),
-                        ),
-                        Text(
-                          'Room ${room.roomNumber} · $floorName',
-                          style: GoogleFonts.inter(
-                            fontSize: 12,
-                            color: AppTheme.textSecondary,
-                          ),
-                        ),
-                      ],
+                    child: Text(
+                      room.name,
+                      style: const TextStyle(
+                        fontSize: 14,
+                        fontWeight: FontWeight.w700,
+                        color: AppTheme.textPrimary,
+                      ),
+                      maxLines: 1,
+                      overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  const Icon(
-                    Icons.chevron_right_rounded,
-                    size: 18,
-                    color: Color(0xFFADB5BD),
-                  ),
+                  if (isDemoRoute)
+                    Container(
+                      padding: const EdgeInsets.symmetric(
+                          horizontal: 6, vertical: 2),
+                      decoration: BoxDecoration(
+                        color: AppTheme.primary,
+                        borderRadius: BorderRadius.circular(6),
+                      ),
+                      child: const Text(
+                        'DEMO ROUTE',
+                        style: TextStyle(
+                          fontSize: 9,
+                          fontWeight: FontWeight.w800,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
                 ],
+              ),
+              subtitle: Text(
+                '${room.roomNumber.isNotEmpty ? 'Room ${room.roomNumber} • ' : ''}${room.floor == 'ground' ? 'Ground Floor' : room.floor}',
+                style: const TextStyle(
+                  fontSize: 12,
+                  color: AppTheme.textSecondary,
+                ),
+              ),
+              trailing: IconButton(
+                icon: const Icon(
+                  Icons.navigation_rounded,
+                  color: AppTheme.primary,
+                  size: 22,
+                ),
+                tooltip: 'Direct Navigate',
+                onPressed: () {
+                  state.setNavigationDestination(room);
+                  state.startNavigation();
+                  context.go('/map');
+                },
               ),
             ),
           );
@@ -402,88 +567,63 @@ class _HomeScreenState extends State<HomeScreen>
   }
 }
 
-// ── Reusable Primary Action Button ─────────────────────────────
-class _PrimaryActionButton extends StatefulWidget {
+class _ActionButton extends StatelessWidget {
   final String label;
   final String subtitle;
   final IconData icon;
-  final Color color;
+  final Color backgroundColor;
+  final Color foregroundColor;
   final VoidCallback onTap;
 
-  const _PrimaryActionButton({
+  const _ActionButton({
     required this.label,
     required this.subtitle,
     required this.icon,
-    required this.color,
+    required this.backgroundColor,
+    required this.foregroundColor,
     required this.onTap,
   });
 
   @override
-  State<_PrimaryActionButton> createState() => _PrimaryActionButtonState();
-}
-
-class _PrimaryActionButtonState extends State<_PrimaryActionButton> {
-  bool _pressed = false;
-
-  @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTapDown: (_) => setState(() => _pressed = true),
-      onTapUp: (_) {
-        setState(() => _pressed = false);
-        widget.onTap();
-      },
-      onTapCancel: () => setState(() => _pressed = false),
-      child: AnimatedScale(
-        scale: _pressed ? 0.97 : 1.0,
-        duration: const Duration(milliseconds: 120),
-        child: Container(
-          width: double.infinity,
-          padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 18),
-          decoration: BoxDecoration(
-            color: widget.color,
-            borderRadius: BorderRadius.circular(16),
-          ),
-          child: Row(
-            children: [
-              Icon(
-                widget.icon,
-                color: Colors.white,
-                size: 22,
+      onTap: onTap,
+      child: Container(
+        padding: const EdgeInsets.all(16),
+        decoration: BoxDecoration(
+          color: backgroundColor,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: backgroundColor.withValues(alpha: 0.25),
+              blurRadius: 12,
+              offset: const Offset(0, 4),
+            ),
+          ],
+        ),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Icon(icon, color: foregroundColor, size: 28),
+            const SizedBox(height: 12),
+            Text(
+              label,
+              style: GoogleFonts.inter(
+                fontSize: 15,
+                fontWeight: FontWeight.w800,
+                color: foregroundColor,
               ),
-              const SizedBox(width: 16),
-              Expanded(
-                child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    Text(
-                      widget.label,
-                      style: GoogleFonts.inter(
-                        fontSize: 16,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                        letterSpacing: -0.3,
-                      ),
-                    ),
-                    const SizedBox(height: 2),
-                    Text(
-                      widget.subtitle,
-                      style: GoogleFonts.inter(
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                        color: Colors.white.withValues(alpha: 0.65),
-                      ),
-                    ),
-                  ],
-                ),
+            ),
+            const SizedBox(height: 2),
+            Text(
+              subtitle,
+              style: GoogleFonts.inter(
+                fontSize: 11,
+                fontWeight: FontWeight.w500,
+                color: foregroundColor.withValues(alpha: 0.75),
               ),
-              Icon(
-                Icons.chevron_right_rounded,
-                color: Colors.white.withValues(alpha: 0.5),
-                size: 20,
-              ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

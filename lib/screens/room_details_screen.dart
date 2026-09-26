@@ -175,10 +175,10 @@ class _RoomDetailsView extends StatelessWidget {
                 // Action buttons
                 ElevatedButton.icon(
                   onPressed: () {
-                    context.read<AppState>().setNavigationDestination(room);
-                    // TODO (Navigation): Call NavigationService.findRoute() here
-                    // before pushing AR screen.
-                    context.push('/ar');
+                    final state = context.read<AppState>();
+                    state.setNavigationDestination(room);
+                    state.startNavigation();
+                    context.go('/map');
                   },
                   icon: const Icon(Icons.navigation_rounded),
                   label: const Text('Navigate Here'),
@@ -194,7 +194,8 @@ class _RoomDetailsView extends StatelessWidget {
                 const SizedBox(height: 12),
                 OutlinedButton.icon(
                   onPressed: () {
-                    context.read<AppState>().selectRoom(room);
+                    final state = context.read<AppState>();
+                    state.selectRoom(room);
                     context.go('/map');
                   },
                   icon: const Icon(Icons.map_rounded),
